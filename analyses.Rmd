@@ -38,8 +38,8 @@ install.packages('pacman')
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 # Install and load required packages
-pacman::p_load(dplyr, ggmap, ggspatial, ggplot2, janitor, lme4, 
-               readxl, sf, sp, tidyverse, viridis)
+pacman::p_load(dplyr, ggmap, ggspatial, ggplot2, janitor, lme4, lwgeom,
+               readxl, sf, sp, tidyr, tidyverse, viridis)
 ```
 
 Secondly, we'll read in our data and explore it.
@@ -541,69 +541,206 @@ ggsave(plot=mod_map, "figures/raven visits map.jpeg", height=4, width=6, dpi=300
 
 ### Calculate influence of spatial features on responses
 
-Here we read in, project, and map the bait stations across Ginninderry Conservation Corridor using shapefiles for Ginninderry's boundaries, roads, tracks, vegetation, and waterbodies.
+Here we read in, project, and map the bait stations across Ginninderry Conservation Corridor using shapefiles for Ginninderry's:
+
+  1. Bait station points
+  2. Roads, 
+  3. Construction area,
+  4. Native vegetation areas,
+  5. Australian major vegetation groups (NVIS), and 
+  6. Pondage, and
+  7. Watercourses.
+
+What we need to do for each layer is check its inherent Coordinate Reference System (CRS, using `st_transform()` to find the last 4-digit number of its output), remind the layer of that number (using `st_set_crs()`), and then reproject it to the CRS we wish to work with (using `st_transform("EPSG:4326")`). 
+
+  1. Bait station points
 
 ```{r}
-# Road layers
-gcc_roads <- st_read("shapefiles/i5516_roads.shp") %>%
-  # Set projection using sf
-  st_set_crs("EPSG:4283") %>%
-  st_transform("EPSG:4326")
-
-gcc_tracks <- st_read("shapefiles/i5516_foottracks.shp") %>%
-  # Set projection using sf
-  st_set_crs("EPSG:4283") %>%
-  st_transform("EPSG:4326")
-
-# Hand drawn layers :)
-gcc_hd <- st_read("shapefiles/x.shp")
-st_crs(gcc_hd)
-gcc_hd <- st_read("shapefiles/x.shp") %>%
-  # Set projection using sf
-  st_set_crs("EPSG:4283") %>%
-  st_transform("EPSG:4326")
-
-# Development layers
-construct <- st_read("shapefiles/gcc_construction_area.shp") %>%
-  # Set projection using sf
-  st_set_crs("EPSG:7844") %>%
-  st_transform("EPSG:4326")
-
-# Vegetation layers
-gcc_veg <- st_read("shapefiles/i5516_nativevegetationareas.shp") %>%
-  # Set projection using sf
-  st_set_crs("EPSG:4283") %>%
-  st_transform("EPSG:4326")
-
-act_nvis <- st_read("shapefiles/ACT_NVIS_6.shp") %>%
-  # Set projection using sf
-  st_set_crs("EPSG:4283") %>%
-  st_transform("EPSG:4326") %>%
-  clean_names()
-
-# Water layers
-gcc_pond <- st_read("shapefiles/i5516_pondageareas.shp") %>%
-  # Set projection using sf
-  st_set_crs("EPSG:4283") %>%
-  st_transform("EPSG:4326")
-
-gcc_wcl <- st_read("shapefiles/i5516_watercourselines.shp") %>%
-  # Set projection using sf
-  st_set_crs("EPSG:4283") %>%
-  st_transform("EPSG:4326")
-
 # Read in bait station points
 stations <- st_read("shapefiles/bait_stations_egg_cta.shp") %>%
   as.data.frame() %>%
   fortify() %>%
   clean_names()
 
-# Read in bait station points
+# Tranform to Spatial Points Dataframe
 stations_spdf <- SpatialPointsDataFrame( 
   data.frame(stations$long, stations$lat), 
   stations, proj4string=CRS("EPSG:4326")) %>% 
   st_as_sf()
+```
 
+  2. Roads and tracks
+  
+```{r}
+# Read in the layer
+gcc_roads <- st_read("shapefiles/i5516_roads.shp")
+
+# Remind the layer of its CRS then reproject to our desired CRS
+gcc_roads <- gcc_roads %>%
+  # Set projection using sf
+  st_set_crs(st_crs(gcc_roads)) %>%
+  st_transform("EPSG:4326")
+```
+
+  3. Construction area
+
+```{r}
+# Read in the layer
+construct <- st_read("shapefiles/construction area.shp")
+
+# Remind the layer of its CRS then reproject to our desired CRS
+construct <- construct %>%
+  # Change EPSG here to match the last number from st_crs() output
+  st_set_crs(st_crs(construct)) %>%
+  st_transform("EPSG:4326")
+```
+
+  4. Native vegetation areas
+
+```{r}
+# Read in the layer
+gcc_veg <- st_read("shapefiles/i5516_nativevegetationareas.shp")
+
+# Remind the layer of its CRS then reproject to our desired CRS
+gcc_veg <- gcc_veg %>%
+  # Change EPSG here to match the last number from st_crs() output
+  st_set_crs(st_crs(gcc_veg)) %>%
+  st_transform("EPSG:4326")
+```
+
+  5. Australian major vegetation groups (NVIS)
+
+Here we use the Australian [National Vegetation Information System (NVIS)](www.fed.dcceew.gov.au) major extant vegetation groups to determine whether our responses of `bait_take`, `fox_visits`, or `raven_visits` were influenced by the habitat type the bait station was in. 
+
+Since the NVIS file is so large, we need to crop it to the size of the the GCC site.
+
+```{r}
+# Remind the layer of its CRS then reproject to our desired CRS
+nvis_shp <- st_read("shapefiles/ACT_NVIS_6.shp") %>%
+# Change EPSG here to match the last number from st_crs() output
+  st_set_crs(st_crs(act_nvis)) %>%
+  st_transform("EPSG:4326") %>%
+  clean_names()
+
+# Attempt to fix invalid geometries
+nvis_shp <- st_make_valid(nvis_shp)
+
+nvis_shp$area <- st_area(nvis_shp)/1000000 #library(raster) in km2
+nvis_for <- fortify(nvis_shp) #transforms from from sp to dataframe
+
+
+fortify <- fortify(nvis_shp) #transforms from from sp to dataframe
+
+nvis_groups <- aggregate(nvis_shp$area, 
+                         list(nvis_habitat=nvis_shp$MVG_NAME, 
+                              mfws_habitat=nvis_shp$MFWS_NAME), sum)
+
+
+mfws_group <- as.data.frame(nvis_shp) %>% clean_names() %>%
+  mutate(mfws_habitat=mfws_name) %>%
+  group_by(mfws_habitat) %>%
+  summarise(area=sum(area))
+
+
+# Read in coordinates data and prepare for plotting
+diu <- read_excel(raw_data, sheet="dens") %>% 
+  clean_names() %>% 
+  na.omit() %>%
+  mutate(easting=as.numeric(easting), 
+         northing=as.numeric(northing), 
+         date=as.POSIXct(date_tracked), 
+         day=as.numeric(yday(date)), #day of the year variable
+         night=(as.numeric(yday(date)) - 157), #night variable)
+         period=ifelse(night >=3 & night <=21, 'Baseline', 
+                ifelse(night >=22 & night <=32, 'Release',
+                ifelse(night >=33 & night <=52, 'Settlement', NA)))) %>%
+  # Remove irrelevant dates
+  subset(night >=3 & night <=52) %>% 
+  subset(ifelse(cohort=="Resident", night <=32, night >=22))
+
+diu_sp <- SpatialPointsDataFrame( #library(sp)
+  data.frame(diu$easting, diu$northing), diu,
+  proj4string=CRS("EPSG:32755")) %>% st_as_sf()
+
+nvis <- st_read("shapefiles/mfws_nvis_vegetation_groups.shp", quiet=TRUE) %>%
+  st_transform("EPSG:32755")
+
+diu_nvis <- st_join(diu_sp, nvis, join=st_intersects) %>%
+  rename(mfws_habitat=MFWS_NAME) %>% 
+  st_drop_geometry()
+
+
+
+multipolygon_sf <- st_as_sf(act_nvis)
+
+# Convert the MULTIPOLYGON to a list of polygons
+polygons <- st_cast(multipolygon_sf, "POLYGON")
+
+# Calculate the extent for each polygon
+extents <- lapply(polygons, st_bbox)
+
+# Combine the extents of all polygons
+overall_extent <- do.call(st_bbox, extents)
+
+# Convert the extent to a data frame
+extent_df <- as.data.frame(overall_extent)
+
+# Reshape the data frame into a tidy format
+tidy_extent <- gather(extent_df, key = "dimension", value = "value")
+
+# Output the tidy extent
+print(tidy_extent)
+
+
+
+
+# Extract boundary box coordinates from bait station points
+bbox_coords <- c(xmin=st_bbox(stations_spdf)[[1]], 
+                 xmax=st_bbox(stations_spdf)[[3]], 
+                 ymin=st_bbox(stations_spdf)[[2]], 
+                 ymax=st_bbox(stations_spdf)[[4]])
+extent(act_nvis)
+# Create a bounding box for cropping NVIS layer
+bbox <- st_as_sf(data.frame(id=1, geometry = st_as_sfc(st_bbox(bbox_coords))),
+                 crs=st_crs(stations_spdf))
+
+# Crop the NVIS layer to the GCC boundary
+gcc_nvis <- st_crop(act_nvis, bbox)
+
+# Check the extent of the cropped NVIS layer
+plot(gcc_nvis)
+```
+
+  6. Pondage
+
+```{r}
+# Read in the layer
+gcc_pond <- st_read("shapefiles/i5516_pondageareas.shp")
+
+# Remind the layer of its CRS then reproject to our desired CRS
+gcc_pond <- gcc_pond %>%
+  # Change EPSG here to match the last number from st_crs() output
+  st_set_crs(st_crs(gcc_pond)) %>%
+  st_transform("EPSG:4326")
+```
+
+  7. Watercourse lines
+
+```{r}
+# Read in the layer
+gcc_wcl <- st_read("shapefiles/i5516_watercourselines.shp")
+
+# Check the CRS
+st_crs(gcc_wcl)
+
+# Remind the layer of its CRS then reproject to our desired CRS
+gcc_wcl <- gcc_wcl %>%
+  # Change EPSG here to match the last number from st_crs() output
+  st_set_crs("EPSG:4283") %>%
+  st_transform("EPSG:4326")
+```
+
+```{r}
 # Print bounding box coordinates for GCC
 st_bbox(stations_spdf)
 
@@ -612,21 +749,20 @@ xmin <- st_bbox(stations_spdf)[[1]]-0.01
 xmax <- st_bbox(stations_spdf)[[3]]+0.01
 ymin <- st_bbox(stations_spdf)[[2]]-0.01
 ymax <- st_bbox(stations_spdf)[[4]]+0.01
-```
 
-```{r}
 # Map the site
 gin_map_cons <- ggplot() + 
   #geom_sf(data=gcc_roads, col="darkred") + 
   #geom_sf(data=gcc_tracks, col="darkorange") + 
   #geom_sf(data=construct, fill="yellow") + 
   #geom_sf(data=gcc_veg, fill="darkgreen") + 
-  geom_sf(st_zm(act_nvis), mapping=aes(fill=mvg_name), 
-          col="grey30", lwd=0.5, alpha=0.8) + 
+  #geom_sf(st_zm(act_nvis), mapping=aes(fill=mvg_name), 
+  #        col="grey30", lwd=0.5, alpha=0.8) + 
   #geom_sf(data=gcc_pond, col="darkblue") + 
   #geom_sf(data=gcc_wcl, col="blue") + 
+  geom_sf(data=gcc_hd, col="purple") + 
   geom_sf(data=stations_spdf) + 
-  coord_sf(xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+  #coord_sf(xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
   theme_minimal() +
   scale_fill_manual(values=viridis(18, begin=0.9, end=0.1)) +
   xlab("") + ylab("") + labs(col="Treatment")
@@ -636,5 +772,16 @@ print(gin_map_cons)
 ```
 
 ```{r}
+
+```
+
+
+```{r}
 install.packages("bomrang")
+```
+
+**Session information**
+
+```{r}
+
 ```
