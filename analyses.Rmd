@@ -38,8 +38,7 @@ install.packages('pacman')
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 # Install and load required packages
-pacman::p_load(dplyr, ggmap, ggspatial, ggplot2, janitor, lme4, lwgeom,
-               readxl, sf, sp, tidyr, tidyverse, viridis)
+pacman::p_load(dplyr, ggmap, ggspatial, ggplot2, ggpubr, janitor, lme4, lmerTest, lwgeom, MuMIn, readxl, sf, sp, tidyr, tidyverse, viridis)
 ```
 
 Secondly, we'll read in our data and explore it.
@@ -90,6 +89,17 @@ data <- read_excel(path="data.xlsx", sheet="data") %>%
   mutate(phase = as.factor(phase)) %>%
   drop_na(bait_take) %>%
   mutate(bait_yes = ifelse(bait_take == 1, "Yes", "No"))
+```
+
+*Ellie, explain why you're going to exclude Fridays here*
+
+```{r}
+# Create a column for day of the week from the date variable
+
+
+# Remove Fridays from the dataframe
+
+
 ```
 
 ## Weather
@@ -163,7 +173,9 @@ bait_treat <- ggplot(data, aes(x = as.Date(date),
 
 # Display the plot
 print(bait_treat)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/bait_treat.jpeg", height=1500, width=2000, unit="px")
 ```
@@ -192,7 +204,9 @@ bait_treat_phase <- ggplot(data, aes(x = as.Date(date),
 
 # Display the plot
 print(bait_treat_phase)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/bait_treat_phase.jpeg", height=1500, width=2000, unit="px")
 ```
@@ -222,7 +236,9 @@ taken_species_phase_hist <- ggplot(data=taken,
 
 # Display the plot
 print(taken_species_phase_hist)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/taken_species_phase_hist.jpeg", height=1500, width=2000, unit="px")
 ```
@@ -245,7 +261,9 @@ bait_rain <- ggplot(data, aes(x = rainfall_mm,
   
 # Display the plot
 print(bait_rain)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/bait_rain.jpeg", height=1500, width=2000, unit="px")
 ```
@@ -276,7 +294,9 @@ visits_fox_histogram <- ggplot(data=fox_stats,
 
 # Display the plot
 print(visits_fox_histogram)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/visits_fox_histogram.jpeg", height=1500, width=3000, unit="px")
 ```
@@ -303,7 +323,9 @@ bait_treat_phase <- ggplot(data=foxes_only, aes(x = as.Date(date),
 
 # Display the plot
 print(bait_treat_phase)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/bait_foxes_treat_phase.jpeg", height=1500, width=3000, unit="px")
 ```
@@ -334,7 +356,9 @@ visits_raven_hist <- ggplot(data=raven_stats,
 
 # Display the plot
 print(visits_raven_hist)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/visits_raven_hist.jpeg", height=1500, width=3000, unit="px")
 ```
@@ -361,7 +385,9 @@ bait_raven_treat_phase <- ggplot(data=ravens_only, aes(x = as.Date(date),
 
 # Display the plot
 print(bait_raven_treat_phase)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/bait_ravens_treat_phase.jpeg", height=1500, width=3000, unit="px")
 ```
@@ -386,7 +412,9 @@ bait_visits <- ggplot(data, mapping=aes(x = as.Date(date))) +
 
 # Display the plot
 print(bait_visits)
+```
 
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave("figures/bait_visits.jpeg", height=1500, width=2000, unit="px")
 ```
@@ -484,7 +512,7 @@ mod_map <- ggmap(map) +
 print(mod_map)
 ```
 
-```{r, echo=FALSE}
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave(plot=mod_map, "figures/bait take map.jpeg", height=4, width=6, dpi=300)
 ```
@@ -509,7 +537,7 @@ mod_map <- ggmap(map) +
 print(mod_map)
 ```
 
-```{r, echo=FALSE}
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave(plot=mod_map, "figures/fox visits map.jpeg", height=4, width=6, dpi=300)
 ```
@@ -534,24 +562,26 @@ mod_map <- ggmap(map) +
 print(mod_map)
 ```
 
-```{r, echo=FALSE}
+```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
 ggsave(plot=mod_map, "figures/raven visits map.jpeg", height=4, width=6, dpi=300)
 ```
 
-### Calculate influence of spatial features on responses
+### Spatial features
 
-Here we read in, project, and map the bait stations across Ginninderry Conservation Corridor using shapefiles for Ginninderry's:
+Here we read in, project, and map the bait stations across Ginninderry Conservation Corridor (GCC) using the following shapefiles:
 
-  1. Bait station points
-  2. Roads, 
-  3. Construction area,
-  4. Native vegetation areas,
-  5. Australian major vegetation groups (NVIS), and 
+  1. Bait station points,
+  2. GCC boundary,
+  3. Roads, 
+  4. Construction area,
+  5. Native vegetation areas,
   6. Pondage, and
   7. Watercourses.
 
 What we need to do for each layer is check its inherent Coordinate Reference System (CRS, using `st_transform()` to find the last 4-digit number of its output), remind the layer of that number (using `st_set_crs()`), and then reproject it to the CRS we wish to work with (using `st_transform("EPSG:4326")`). 
+
+#### Calculate distance to features
 
   1. Bait station points
 
@@ -569,7 +599,31 @@ stations_spdf <- SpatialPointsDataFrame(
   st_as_sf()
 ```
 
-  2. Roads and tracks
+  2. GCC boundary
+
+```{r}
+# Read in the layer
+gcc_bou <- st_read("shapefiles/gcc_boundary_polygon.shp")
+
+# Remind the layer of its CRS then reproject to our desired CRS
+gcc_bou <- gcc_bou %>%
+  # Set projection using sf
+  st_set_crs(st_crs(gcc_bou)) %>%
+  st_transform("EPSG:4326")
+
+# Calculate distance of bait stations to nearest edge of polygon
+dist_bou <- st_geometry(obj = gcc_bou) %>%
+  st_cast(to = 'MULTILINESTRING') %>%
+  st_distance(y=stations_spdf) %>%
+  as.data.frame() %>%
+  # Transpose the df from columns to rows
+  t()
+
+# Join distances to bait stations df 
+stations_spdf <- cbind(stations_spdf, dist_bou)
+```
+
+  3. Roads and tracks
   
 ```{r}
 # Read in the layer
@@ -580,22 +634,47 @@ gcc_roads <- gcc_roads %>%
   # Set projection using sf
   st_set_crs(st_crs(gcc_roads)) %>%
   st_transform("EPSG:4326")
+
+# Convert linestrings to a single multilinestring
+gcc_roads <- st_union(gcc_roads)
+
+# Calculate distance of bait stations to nearest edge of polygon
+dist_roads <- st_geometry(obj = gcc_roads) %>%
+  st_cast(to = 'MULTILINESTRING') %>%
+  st_distance(y=stations_spdf) %>%
+  as.data.frame() %>%
+  # Transpose the df from columns to rows
+  t()
+
+# Join distances to bait stations df 
+stations_spdf <- cbind(stations_spdf, dist_roads)
 ```
 
-  3. Construction area
+  4. Construction area
 
 ```{r}
 # Read in the layer
-construct <- st_read("shapefiles/construction area.shp")
+construct <- st_read("shapefiles/gcc_construction_area.shp")
 
 # Remind the layer of its CRS then reproject to our desired CRS
 construct <- construct %>%
   # Change EPSG here to match the last number from st_crs() output
   st_set_crs(st_crs(construct)) %>%
   st_transform("EPSG:4326")
+
+# Calculate distance of bait stations to nearest edge of polygon
+dist_con <- st_geometry(obj = construct) %>%
+  st_cast(to = 'MULTILINESTRING') %>%
+  st_distance(y=stations_spdf) %>%
+  as.data.frame() %>%
+  # Transpose the df from columns to rows
+  t()
+
+# Join distances to bait stations df 
+stations_spdf <- cbind(stations_spdf, dist_con)
 ```
 
-  4. Native vegetation areas
+  5. Native vegetation areas
 
 ```{r}
 # Read in the layer
@@ -606,109 +685,23 @@ gcc_veg <- gcc_veg %>%
   # Change EPSG here to match the last number from st_crs() output
   st_set_crs(st_crs(gcc_veg)) %>%
   st_transform("EPSG:4326")
-```
 
-  5. Australian major vegetation groups (NVIS)
+# Check for and fix invalid geometries
+gcc_veg <- st_make_valid(gcc_veg)
 
-Here we use the Australian [National Vegetation Information System (NVIS)](www.fed.dcceew.gov.au) major extant vegetation groups to determine whether our responses of `bait_take`, `fox_visits`, or `raven_visits` were influenced by the habitat type the bait station was in. 
+# Convert multiple features to a single feature
+gcc_veg <- st_union(gcc_veg)
 
-Since the NVIS file is so large, we need to crop it to the size of the the GCC site.
+# Calculate distance of bait stations to nearest edge of polygon
+dist_veg <- st_geometry(obj = gcc_veg) %>%
+  st_cast(to = 'MULTILINESTRING') %>%
+  st_distance(y=stations_spdf) %>%
+  as.data.frame() %>%
+  # Transpose the df from columns to rows
+  t()
 
-```{r}
-# Remind the layer of its CRS then reproject to our desired CRS
-nvis_shp <- st_read("shapefiles/ACT_NVIS_6.shp") %>%
-# Change EPSG here to match the last number from st_crs() output
-  st_set_crs(st_crs(act_nvis)) %>%
-  st_transform("EPSG:4326") %>%
-  clean_names()
-
-# Attempt to fix invalid geometries
-nvis_shp <- st_make_valid(nvis_shp)
-
-nvis_shp$area <- st_area(nvis_shp)/1000000 #library(raster) in km2
-nvis_for <- fortify(nvis_shp) #transforms from from sp to dataframe
-
-
-fortify <- fortify(nvis_shp) #transforms from from sp to dataframe
-
-nvis_groups <- aggregate(nvis_shp$area, 
-                         list(nvis_habitat=nvis_shp$MVG_NAME, 
-                              mfws_habitat=nvis_shp$MFWS_NAME), sum)
-
-
-mfws_group <- as.data.frame(nvis_shp) %>% clean_names() %>%
-  mutate(mfws_habitat=mfws_name) %>%
-  group_by(mfws_habitat) %>%
-  summarise(area=sum(area))
-
-
-# Read in coordinates data and prepare for plotting
-diu <- read_excel(raw_data, sheet="dens") %>% 
-  clean_names() %>% 
-  na.omit() %>%
-  mutate(easting=as.numeric(easting), 
-         northing=as.numeric(northing), 
-         date=as.POSIXct(date_tracked), 
-         day=as.numeric(yday(date)), #day of the year variable
-         night=(as.numeric(yday(date)) - 157), #night variable)
-         period=ifelse(night >=3 & night <=21, 'Baseline', 
-                ifelse(night >=22 & night <=32, 'Release',
-                ifelse(night >=33 & night <=52, 'Settlement', NA)))) %>%
-  # Remove irrelevant dates
-  subset(night >=3 & night <=52) %>% 
-  subset(ifelse(cohort=="Resident", night <=32, night >=22))
-
-diu_sp <- SpatialPointsDataFrame( #library(sp)
-  data.frame(diu$easting, diu$northing), diu,
-  proj4string=CRS("EPSG:32755")) %>% st_as_sf()
-
-nvis <- st_read("shapefiles/mfws_nvis_vegetation_groups.shp", quiet=TRUE) %>%
-  st_transform("EPSG:32755")
-
-diu_nvis <- st_join(diu_sp, nvis, join=st_intersects) %>%
-  rename(mfws_habitat=MFWS_NAME) %>% 
-  st_drop_geometry()
-
-
-
-multipolygon_sf <- st_as_sf(act_nvis)
-
-# Convert the MULTIPOLYGON to a list of polygons
-polygons <- st_cast(multipolygon_sf, "POLYGON")
-
-# Calculate the extent for each polygon
-extents <- lapply(polygons, st_bbox)
-
-# Combine the extents of all polygons
-overall_extent <- do.call(st_bbox, extents)
-
-# Convert the extent to a data frame
-extent_df <- as.data.frame(overall_extent)
-
-# Reshape the data frame into a tidy format
-tidy_extent <- gather(extent_df, key = "dimension", value = "value")
-
-# Output the tidy extent
-print(tidy_extent)
-
-
-
-
-# Extract boundary box coordinates from bait station points
-bbox_coords <- c(xmin=st_bbox(stations_spdf)[[1]], 
-                 xmax=st_bbox(stations_spdf)[[3]], 
-                 ymin=st_bbox(stations_spdf)[[2]], 
-                 ymax=st_bbox(stations_spdf)[[4]])
-extent(act_nvis)
-# Create a bounding box for cropping NVIS layer
-bbox <- st_as_sf(data.frame(id=1, geometry = st_as_sfc(st_bbox(bbox_coords))),
-                 crs=st_crs(stations_spdf))
-
-# Crop the NVIS layer to the GCC boundary
-gcc_nvis <- st_crop(act_nvis, bbox)
-
-# Check the extent of the cropped NVIS layer
-plot(gcc_nvis)
+# Join distances to bait stations df 
+stations_spdf <- cbind(stations_spdf, dist_veg)
 ```
 
   6. Pondage
@@ -722,6 +715,20 @@ gcc_pond <- gcc_pond %>%
   # Change EPSG here to match the last number from st_crs() output
   st_set_crs(st_crs(gcc_pond)) %>%
   st_transform("EPSG:4326")
+
+# Convert multiple features to a single feature
+gcc_pond <- st_union(gcc_pond)
+
+# Calculate distance of bait stations to nearest edge of polygon
+dist_pond <- st_geometry(obj = gcc_pond) %>%
+  st_cast(to = 'MULTILINESTRING') %>%
+  st_distance(y=stations_spdf) %>%
+  as.data.frame() %>%
+  # Transpose the df from columns to rows
+  t()
+
+# Join distances to bait stations df 
+stations_spdf <- cbind(stations_spdf, dist_pond)
 ```
 
   7. Watercourse lines
@@ -730,54 +737,152 @@ gcc_pond <- gcc_pond %>%
 # Read in the layer
 gcc_wcl <- st_read("shapefiles/i5516_watercourselines.shp")
 
-# Check the CRS
-st_crs(gcc_wcl)
-
 # Remind the layer of its CRS then reproject to our desired CRS
 gcc_wcl <- gcc_wcl %>%
   # Change EPSG here to match the last number from st_crs() output
   st_set_crs("EPSG:4283") %>%
   st_transform("EPSG:4326")
+
+# Convert linestrings to a single multilinestring
+gcc_wcl <- st_union(gcc_wcl)
+
+# Calculate distance of bait stations to nearest edge of polygon
+dist_wcl <- st_geometry(obj = gcc_wcl) %>%
+  st_cast(to = 'MULTILINESTRING') %>%
+  st_distance(y=stations_spdf) %>%
+  as.data.frame() %>%
+  # Transpose the df from columns to rows
+  t()
+
+# Join distances to bait stations df 
+stations_spdf <- cbind(stations_spdf, dist_wcl)
 ```
 
 ```{r}
-# Print bounding box coordinates for GCC
-st_bbox(stations_spdf)
+# Rename name to site
+stations <- stations_spdf %>%
+  rename(site = name)
 
-# Save coordinates
-xmin <- st_bbox(stations_spdf)[[1]]-0.01
-xmax <- st_bbox(stations_spdf)[[3]]+0.01
-ymin <- st_bbox(stations_spdf)[[2]]-0.01
-ymax <- st_bbox(stations_spdf)[[4]]+0.01
+# Join response df to spatial df
+data <- left_join(data, stations, by="site") %>%
+  filter(!is.na(bait_take))
+```
 
+#### Model relationship between distance to features
+
+Here we model the relationship between our response variables (i.e., `bait_take`, `fox_vists`, and `raven_visits`) and the distance between the bait station and nearby spatial features (i.e., boundary [`dist_bou`], roads [`dist_roads`], construction site [`dist_con`], vegetation strip [`dist_veg`], pondage [`dist_pond`], watercourses [`dist_wcl`]). 
+
+```{r}
+# Subset to only variables in the subsequent models
+data_mod <- data %>%
+  select(bait_take, treatment, fox_visits, raven_visits, 
+         dist_bou, dist_roads, dist_con, dist_veg, dist_pond, dist_wcl) %>%
+  na.omit()
+
+# Fit the model with glm
+mod <- glm(bait_take ~ treatment + dist_bou + dist_roads + dist_con + 
+              dist_veg + dist_pond + dist_wcl, 
+            data = data_mod, family=binomial, na.action = "na.fail")
+
+# Display summary statistics
+summary(mod)
+
+# Since dist_pond and dist_wcl was non-significant, remove from model
+mod <- glm(bait_take ~ treatment + dist_bou + dist_roads + dist_con + dist_veg, 
+            data = data_mod, family=binomial, na.action = "na.fail")
+
+# Display summary statistics
+summary(mod)
+
+# Perform model selection using dredge() with AICc
+dredge(mod, rank = "AICc") %>%
+  filter(delta <2)
+```
+
+Plot bait take against `dist_bou`, `dist_con`, `dist_roads`, `dist_veg`.
+
+```{r}
+# Plot the distances against bait take
+dist_bou_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_bou, y=bait_take), 
+              col="purple", fill="purple") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest boundary (m)") + 
+  ylab("Bait take (proportion)") + 
+  theme_minimal()
+
+dist_con_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_con, y=bait_take), 
+              col="orange", fill="orange") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest part of construction site (m)") + 
+  ylab("Bait take (proportion)") + 
+  theme_minimal()
+
+dist_road_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_roads, y=bait_take), 
+              col="darkgrey", fill="darkgrey") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest road (m)") + 
+  ylab("Bait take (proportion)") + 
+  theme_minimal()
+
+dist_veg_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_veg, y=bait_take), 
+              col="green", fill="green") +
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest vegetation patch (m)") + 
+  ylab("Bait take (proportion)") + 
+  theme_minimal()
+
+dist_plots <- ggarrange(dist_bou_plot, dist_con_plot, 
+                        dist_road_plot, dist_veg_plot, 
+                        nrow=2, ncol=2)
+
+# Display the plot
+print(dist_plots)
+```
+
+```{r, eval=FALSE, include=FALSE}
+# Save the plot as a jpeg
+ggsave(plot=dist_plots, "figures/bait take by distance and treatment.jpeg", 
+       height=6, width=10, dpi=300)
+```
+
+*Next, repeat these models and plots for fox visits and raven visits.*
+
+#### Map bait stations and features
+
+Map these layers
+
+```{r}
 # Map the site
-gin_map_cons <- ggplot() + 
-  #geom_sf(data=gcc_roads, col="darkred") + 
-  #geom_sf(data=gcc_tracks, col="darkorange") + 
-  #geom_sf(data=construct, fill="yellow") + 
-  #geom_sf(data=gcc_veg, fill="darkgreen") + 
-  #geom_sf(st_zm(act_nvis), mapping=aes(fill=mvg_name), 
-  #        col="grey30", lwd=0.5, alpha=0.8) + 
-  #geom_sf(data=gcc_pond, col="darkblue") + 
-  #geom_sf(data=gcc_wcl, col="blue") + 
-  geom_sf(data=gcc_hd, col="purple") + 
-  geom_sf(data=stations_spdf) + 
-  #coord_sf(xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+gcc_map <- ggplot() + 
+  geom_sf(data=gcc_roads, col="darkgrey") + 
+  geom_sf(data=construct, fill="orange", alpha=0.3) + 
+  geom_sf(data=gcc_veg, fill="green", alpha=0.3) + 
+  geom_sf(data=gcc_pond, col="lightblue") + 
+  geom_sf(data=gcc_wcl, col="blue") + 
+  geom_sf(data=gcc_bou, fill="purple", alpha=0.3) + 
+  geom_sf(data=stations_spdf, aes(col=treatment)) + 
+  geom_text(data=stations_spdf, aes(x=long, y=lat, label=name), size=3, color="black") +
+  # Limit map to GCC extent
+  coord_sf(xlim = c(st_bbox(stations_spdf)[[1]]-0.005, 
+                    st_bbox(stations_spdf)[[3]]+0.005), 
+           ylim = c(st_bbox(stations_spdf)[[2]]-0.005, 
+                    st_bbox(stations_spdf)[[4]]+0.005)) +
   theme_minimal() +
   scale_fill_manual(values=viridis(18, begin=0.9, end=0.1)) +
   xlab("") + ylab("") + labs(col="Treatment")
 
 # Display the plot
-print(gin_map_cons)
+print(gcc_map)
 ```
 
-```{r}
-
-```
-
-
-```{r}
-install.packages("bomrang")
+```{r, eval=FALSE, include=FALSE}
+# Save the plot as a jpeg
+ggsave(plot=gcc_map, "figures/gcc features and bait stations map.jpeg", 
+       height=4, width=6, dpi=300)
 ```
 
 **Session information**
