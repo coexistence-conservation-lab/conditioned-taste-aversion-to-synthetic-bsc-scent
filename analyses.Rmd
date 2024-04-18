@@ -91,14 +91,28 @@ data <- read_excel(path="data.xlsx", sheet="data") %>%
   mutate(bait_yes = ifelse(bait_take == 1, "Yes", "No"))
 ```
 
-*Ellie, explain why you're going to exclude Fridays here*
+We exclude Friday's data from the dataset here. The cameras were inconsistant so, if an egg was missing when baits were checked on Monday and the camera had failed, we would not be able to say with certainty that it had been taken within 24 hours of deployment. This means the data from that site would be excluded for that day. If an egg was not taken, we would still be able to use that data. As a result, this skewed our results towards egg rejection. To be consistent, it is better to reject all of Fridays data.
 
 ```{r}
 # Create a column for day of the week from the date variable
+# Generate a sequence of dates
+dates <- seq(as.Date("2024-01-01"), as.Date("2024-12-31"), by = "day")
+
+# Extract days of the week
+days_of_week <- weekdays(dates)
+
+# Combine with original dataset
+df <- data.frame(Date = dates, DayOfWeek = days_of_week)
+
+# Print the resulting dataframe
+print(df)
 
 
 # Remove Fridays from the dataframe
+df_filtered <- subset(df, DayOfWeek != "Friday")
 
+# Print the resulting dataframe
+print(df_filtered)
 
 ```
 
@@ -850,6 +864,156 @@ ggsave(plot=dist_plots, "figures/bait take by distance and treatment.jpeg",
 ```
 
 *Next, repeat these models and plots for fox visits and raven visits.*
+
+Fox visits
+
+```{r}
+# Subset to only variables in the subsequent models
+data_mod <- data %>%
+  select(bait_take, treatment, fox_visits, raven_visits, 
+         dist_bou, dist_roads, dist_con, dist_veg, dist_pond, dist_wcl) %>%
+  na.omit()
+
+# Fit the model with glm
+mod <- glm(fox_visits ~ treatment + dist_bou + dist_roads + dist_con + 
+              dist_veg + dist_pond + dist_wcl, 
+            data = data_mod, family=binomial, na.action = "na.fail")
+
+# Display summary statistics
+summary(mod)
+
+# Since dist_pond and dist_wcl was non-significant, remove from model
+mod <- glm(fox_visits ~ treatment + dist_bou + dist_roads + dist_con + dist_veg, 
+            data = data_mod, family=binomial, na.action = "na.fail")
+
+# Display summary statistics
+summary(mod)
+
+# Perform model selection using dredge() with AICc
+dredge(mod, rank = "AICc") %>%
+  filter(delta <2)
+
+# Plot the distances against bait take
+dist_bou_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_bou, y=bait_take), 
+              col="purple", fill="purple") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest boundary (m)") + 
+  ylab("Fox vistis (proportion)") + 
+  theme_minimal()
+
+dist_con_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_con, y=bait_take), 
+              col="orange", fill="orange") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest part of construction site (m)") + 
+  ylab("Fox visits (proportion)") + 
+  theme_minimal()
+
+dist_road_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_roads, y=bait_take), 
+              col="darkgrey", fill="darkgrey") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest road (m)") + 
+  ylab("Fox visits (proportion)") + 
+  theme_minimal()
+
+dist_veg_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_veg, y=bait_take), 
+              col="green", fill="green") +
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest vegetation patch (m)") + 
+  ylab("Fox visits (proportion)") + 
+  theme_minimal()
+
+dist_plots <- ggarrange(dist_bou_plot, dist_con_plot, 
+                        dist_road_plot, dist_veg_plot, 
+                        nrow=2, ncol=2)
+
+# Display the plot
+print(dist_plots)
+```
+
+Raven visits
+
+```{r}
+# Subset to only variables in the subsequent models
+data_mod <- data %>%
+  select(bait_take, treatment, fox_visits, raven_visits, 
+         dist_bou, dist_roads, dist_con, dist_veg, dist_pond, dist_wcl) %>%
+  na.omit()
+
+# Fit the model with glm
+mod <- glm(raven_visits ~ treatment + dist_bou + dist_roads + dist_con + 
+              dist_veg + dist_pond + dist_wcl, 
+            data = data_mod, family=binomial, na.action = "na.fail")
+
+# Display summary statistics
+summary(mod)
+
+# Since dist_pond and dist_wcl was non-significant, remove from model
+mod <- glm(raven_visits ~ treatment + dist_bou + dist_roads + dist_con + dist_veg, 
+            data = data_mod, family=binomial, na.action = "na.fail")
+
+# Display summary statistics
+summary(mod)
+
+# Perform model selection using dredge() with AICc
+dredge(mod, rank = "AICc") %>%
+  filter(delta <2)
+```
+
+Plot bait take against `dist_bou`, `dist_con`, `dist_roads`, `dist_veg`.
+
+```{r}
+# Plot the distances against bait take
+dist_bou_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_bou, y=bait_take), 
+              col="purple", fill="purple") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest boundary (m)") + 
+  ylab("Raven visits") + 
+  theme_minimal()
+
+dist_con_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_con, y=bait_take), 
+              col="orange", fill="orange") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest part of construction site (m)") + 
+  ylab("Raven visits") + 
+  theme_minimal()
+
+dist_road_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_roads, y=bait_take), 
+              col="darkgrey", fill="darkgrey") + 
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest road (m)") + 
+  ylab("Raven visits") + 
+  theme_minimal()
+
+dist_veg_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_veg, y=bait_take), 
+              col="green", fill="green") +
+  facet_wrap(~treatment) + 
+  xlab("Distance to nearest vegetation patch (m)") + 
+  ylab("Raven visits") + 
+  theme_minimal()
+
+dist_plots <- ggarrange(dist_bou_plot, dist_con_plot, 
+                        dist_road_plot, dist_veg_plot, 
+                        nrow=2, ncol=2)
+
+# Display the plot
+print(dist_plots)
+```
+
+```{r, eval=FALSE, include=FALSE}
+# Save the plot as a jpeg
+ggsave(plot=dist_plots, "figures/bait take by distance and treatment.jpeg", 
+       height=6, width=10, dpi=300)
+```
+
+
 
 #### Map bait stations and features
 
