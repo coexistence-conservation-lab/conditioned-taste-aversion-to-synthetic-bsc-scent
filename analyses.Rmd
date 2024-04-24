@@ -107,13 +107,11 @@ df <- data.frame(Date = dates, DayOfWeek = days_of_week)
 # Print the resulting dataframe
 print(df)
 
-
 # Remove Fridays from the dataframe
 df_filtered <- subset(df, DayOfWeek != "Friday")
 
 # Print the resulting dataframe
 print(df_filtered)
-
 ```
 
 ## Weather
@@ -135,24 +133,36 @@ data <- left_join(data, weather, by=c("date"))
 # Subset to actual instances of bait take by a vertebrate
 data <- data %>%
   subset(species != "Lizard") %>%
-  mutate(fox_visited = ifelse(fox_visit_1 != 0, "Yes", 
-                       ifelse(fox_visit_2 !=0, "Yes",
-                       ifelse(fox_visit_3 !=0, "Yes", 
-                       ifelse(fox_visit_4 !=0, "Yes", "No"))))) %>%
+  filter(!is.na(fox_visit_1_pa),
+         !is.na(fox_visit_2_pa),
+         !is.na(fox_visit_3_pa), 
+         !is.na(fox_visit_4_pa), 
+         !is.na(fox_visit_5_pa), 
+         !is.na(raven_visit_1_pa), 
+         !is.na(raven_visit_2_pa), 
+         !is.na(raven_visit_3_pa)) %>%
   
-  mutate(fox_visits = ifelse(fox_visit_4 != 0, 4, 
-                      ifelse(fox_visit_3 !=0, 3,
-                      ifelse(fox_visit_2 !=0, 2, 
-                      ifelse(fox_visit_1 !=0, 1, 0))))) %>%
-
-  mutate(raven_visited = ifelse(raven_visit_1 != 0, "Yes", 
-                         ifelse(raven_visit_2 !=0, "Yes",
-                         ifelse(raven_visit_3 !=0, "Yes", "No")))) %>%
+  mutate(fox_visit_pa = ifelse(fox_visit_1_pa !=0, "Yes", 
+                        ifelse(fox_visit_2_pa !=0, "Yes",
+                        ifelse(fox_visit_3_pa !=0, "Yes", 
+                        ifelse(fox_visit_4_pa !=0, "Yes", 
+                        ifelse(fox_visit_5_pa !=0, "Yes", "No")))))) %>%
   
-  mutate(raven_visits = ifelse(raven_visit_3 !=0, 3, 
-                        ifelse(raven_visit_2 !=0, 2,
-                        ifelse(raven_visit_1 !=0, 1, 0))))
+  mutate(fox_visit_n = ifelse(fox_visit_5_pa !=0, 5, 
+                       ifelse(fox_visit_4_pa !=0, 4, 
+                       ifelse(fox_visit_3_pa !=0, 3,
+                       ifelse(fox_visit_2_pa !=0, 2, 
+                       ifelse(fox_visit_1_pa !=0, 1, 0)))))) %>%
 
+  mutate(raven_visit_pa = ifelse(raven_visit_1_pa !=0, "Yes", 
+                          ifelse(raven_visit_2_pa !=0, "Yes",
+                          ifelse(raven_visit_3_pa !=0, "Yes", "No")))) %>%
+  
+  mutate(raven_visit_n = ifelse(raven_visit_3_pa !=0, 3, 
+                         ifelse(raven_visit_2_pa !=0, 2,
+                         ifelse(raven_visit_1_pa !=0, 1, 0))))
+
+# Save the processed data
 write.csv(data, "data processed.csv")
 ```
 
@@ -183,10 +193,13 @@ bait_treat <- ggplot(data, aes(x = as.Date(date),
   ggtitle("All species") +
   xlab("Date") + 
   ylab("Bait take") + 
-  labs(fill="Treatment", col="Treatment")
+  labs(fill="Treatment", col="Treatment") +
 
 # Display the plot
-print(bait_treat)
+#print(bait_treat)
+
+# Model for bait take by treatment
+#summary(glm(bait_take ~ treatment, data=data))
 ```
 
 ```{r, eval=FALSE, include=FALSE}
@@ -218,6 +231,9 @@ bait_treat_phase <- ggplot(data, aes(x = as.Date(date),
 
 # Display the plot
 print(bait_treat_phase)
+
+# Model for bait take by treatment and phase
+summary(glm(bait_take ~ treatment + phase, data=data))
 ```
 
 ```{r, eval=FALSE, include=FALSE}
@@ -275,6 +291,10 @@ bait_rain <- ggplot(data, aes(x = rainfall_mm,
   
 # Display the plot
 print(bait_rain)
+
+
+# Model for bait take by treatment and rainfall
+summary(glm(bait_take ~ treatment + rainfall_mm, data=data))
 ```
 
 ```{r, eval=FALSE, include=FALSE}
@@ -308,6 +328,9 @@ visits_fox_histogram <- ggplot(data=fox_stats,
 
 # Display the plot
 print(visits_fox_histogram)
+
+# Model for fox visits by treatment and phase
+summary(glm(fox_visit_pa ~ treatment + phase, data=data))
 ```
 
 ```{r, eval=FALSE, include=FALSE}
@@ -346,7 +369,7 @@ ggsave("figures/bait_foxes_treat_phase.jpeg", height=1500, width=3000, unit="px"
 
 #### Ravens
 
-Percentage fox visits by treatment and phase
+Percentage raven visits by treatment and phase
 
 ```{r}
 # Subset to only potential foxes
@@ -413,9 +436,9 @@ Bait take by fox visits
 bait_visits <- ggplot(data, mapping=aes(x = as.Date(date))) +
   geom_smooth(data, mapping=aes(y = as.numeric(bait_take)), 
               color = "red", fill = "red") +
-  geom_smooth(data, mapping=aes(y = as.numeric(fox_visits)), 
+  geom_smooth(data, mapping=aes(y = as.numeric(fox_visit_n)), 
               color = "darkorange", fill = "darkorange")  +
-  geom_smooth(data, mapping=aes(y = as.numeric(raven_visits)), 
+  geom_smooth(data, mapping=aes(y = as.numeric(raven_visit_n)), 
               color = "black", fill = "black")  +
   theme_minimal() + 
   facet_wrap(~treatment) +
@@ -449,7 +472,7 @@ summary(glm(bait_take ~ treatment + rainfall_mm, data=data))
 # Model for bait take by treatment and phase
 summary(glm(bait_take ~ treatment + phase, data=data))
 
-# Model for bait take by treatment and phase
+# Model for bait take by treatment and site
 summary(glm(bait_take ~ treatment + site, data=data))
 ```
 
@@ -457,7 +480,7 @@ summary(glm(bait_take ~ treatment + site, data=data))
 
 ```{r}
 # Do fox visits change with treatment or phase?
-summary(glm(fox_visits ~ treatment + phase + 
+summary(glm(fox_visit_n ~ treatment + phase + 
               rainfall_mm + maximum_temperature_c, data=data))
 ```
 
@@ -465,7 +488,7 @@ summary(glm(fox_visits ~ treatment + phase +
 
 ```{r}
 # Model for visits against treatment and phase
-summary(glm(raven_visits ~ treatment + phase + 
+summary(glm(raven_visit_n ~ treatment + phase + 
               rainfall_mm + maximum_temperature_c, data=data))
 ```
 
@@ -473,7 +496,7 @@ summary(glm(raven_visits ~ treatment + phase +
 
 ### Map responses
 
-Here we map our responses of `bait_take`, `fox_visits`, and `raven_visits` across Ginninderry Conservation Corridor.
+Here we map our responses of `bait_take`, `fox_visit_n`, and `raven_visit_n` across Ginninderry Conservation Corridor.
 
 ```{r}
 # Use Google API to fetch a base map
@@ -528,14 +551,15 @@ print(mod_map)
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave(plot=mod_map, "figures/bait take map.jpeg", height=4, width=6, dpi=300)
+ggsave(plot=mod_map, "figures/bait take map.jpeg", 
+       height=4, width=6, dpi=300)
 ```
 
 ```{r}
 # Map the fox visitation
 mod_map <- ggmap(map) + 
   geom_point(data=data, shape=21, size=2, stroke=1, col="white", alpha=0.2,
-             aes(x=long, y=lat, fill=fox_visits)) + 
+             aes(x=long, y=lat, fill=fox_visit_n)) + 
   theme(axis.text.x=element_blank(), 
         axis.text.y=element_blank(), 
         axis.ticks.x=element_blank(), 
@@ -553,14 +577,15 @@ print(mod_map)
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave(plot=mod_map, "figures/fox visits map.jpeg", height=4, width=6, dpi=300)
+ggsave(plot=mod_map, "figures/fox visits map.jpeg", 
+       height=4, width=6, dpi=300)
 ```
 
 ```{r}
 # Map the fox visitation
 mod_map <- ggmap(map) + 
   geom_point(data=data, shape=21, size=2, stroke=1, col="white", alpha=0.2,
-             aes(x=long, y=lat, fill=raven_visits)) + 
+             aes(x=long, y=lat, fill=raven_visit_n)) + 
   theme(axis.text.x=element_blank(), 
         axis.text.y=element_blank(), 
         axis.ticks.x=element_blank(), 
@@ -578,7 +603,8 @@ print(mod_map)
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave(plot=mod_map, "figures/raven visits map.jpeg", height=4, width=6, dpi=300)
+ggsave(plot=mod_map, "figures/raven visits map.jpeg", 
+       height=4, width=6, dpi=300)
 ```
 
 ### Spatial features
@@ -784,12 +810,12 @@ data <- left_join(data, stations, by="site") %>%
 
 #### Model relationship between distance to features
 
-Here we model the relationship between our response variables (i.e., `bait_take`, `fox_vists`, and `raven_visits`) and the distance between the bait station and nearby spatial features (i.e., boundary [`dist_bou`], roads [`dist_roads`], construction site [`dist_con`], vegetation strip [`dist_veg`], pondage [`dist_pond`], watercourses [`dist_wcl`]). 
+Here we model the relationship between our response variables (i.e., `bait_take`, `fox_vists`, and `raven_visit_n`) and the distance between the bait station and nearby spatial features (i.e., boundary [`dist_bou`], roads [`dist_roads`], construction site [`dist_con`], vegetation strip [`dist_veg`], pondage [`dist_pond`], watercourses [`dist_wcl`]). 
 
 ```{r}
 # Subset to only variables in the subsequent models
 data_mod <- data %>%
-  select(bait_take, treatment, fox_visits, raven_visits, 
+  select(bait_take, treatment, fox_visit_n, raven_visit_n, 
          dist_bou, dist_roads, dist_con, dist_veg, dist_pond, dist_wcl) %>%
   na.omit()
 
@@ -870,20 +896,23 @@ Fox visits
 ```{r}
 # Subset to only variables in the subsequent models
 data_mod <- data %>%
-  select(bait_take, treatment, fox_visits, raven_visits, 
+  select(bait_take, treatment, fox_visit_pa, raven_visit_pa, 
          dist_bou, dist_roads, dist_con, dist_veg, dist_pond, dist_wcl) %>%
+  mutate(fox_visit_pa=ifelse(fox_visit_pa=="Yes", 1, 0), 
+         raven_visit_pa=ifelse(fox_visit_pa=="Yes", 1, 0)) %>%
   na.omit()
 
 # Fit the model with glm
-mod <- glm(fox_visits ~ treatment + dist_bou + dist_roads + dist_con + 
-              dist_veg + dist_pond + dist_wcl, 
+mod <- glm(fox_visit_pa ~ treatment + dist_bou + dist_roads + 
+             dist_con + dist_veg + dist_pond + dist_wcl, 
             data = data_mod, family=binomial, na.action = "na.fail")
 
 # Display summary statistics
 summary(mod)
 
 # Since dist_pond and dist_wcl was non-significant, remove from model
-mod <- glm(fox_visits ~ treatment + dist_bou + dist_roads + dist_con + dist_veg, 
+mod <- glm(fox_visit_pa ~ treatment + dist_bou + 
+             dist_roads + dist_con + dist_veg, 
             data = data_mod, family=binomial, na.action = "na.fail")
 
 # Display summary statistics
@@ -937,22 +966,16 @@ print(dist_plots)
 Raven visits
 
 ```{r}
-# Subset to only variables in the subsequent models
-data_mod <- data %>%
-  select(bait_take, treatment, fox_visits, raven_visits, 
-         dist_bou, dist_roads, dist_con, dist_veg, dist_pond, dist_wcl) %>%
-  na.omit()
-
 # Fit the model with glm
-mod <- glm(raven_visits ~ treatment + dist_bou + dist_roads + dist_con + 
+mod <- glm(raven_visit_pa ~ treatment + dist_bou + dist_roads + dist_con + 
               dist_veg + dist_pond + dist_wcl, 
             data = data_mod, family=binomial, na.action = "na.fail")
-
+table(data_mod$raven_visit_pa)
 # Display summary statistics
 summary(mod)
 
 # Since dist_pond and dist_wcl was non-significant, remove from model
-mod <- glm(raven_visits ~ treatment + dist_bou + dist_roads + dist_con + dist_veg, 
+mod <- glm(raven_visit_pa ~ treatment + dist_bou + dist_roads + dist_con + dist_veg, 
             data = data_mod, family=binomial, na.action = "na.fail")
 
 # Display summary statistics
@@ -1029,7 +1052,8 @@ gcc_map <- ggplot() +
   geom_sf(data=gcc_wcl, col="blue") + 
   geom_sf(data=gcc_bou, fill="purple", alpha=0.3) + 
   geom_sf(data=stations_spdf, aes(col=treatment)) + 
-  geom_text(data=stations_spdf, aes(x=long, y=lat, label=name), size=3, color="black") +
+  geom_text(data=stations_spdf, aes(x=long, y=lat, label=name), 
+            size=3, color="black") +
   # Limit map to GCC extent
   coord_sf(xlim = c(st_bbox(stations_spdf)[[1]]-0.005, 
                     st_bbox(stations_spdf)[[3]]+0.005), 
