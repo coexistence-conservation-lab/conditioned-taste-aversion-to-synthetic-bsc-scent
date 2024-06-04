@@ -1,0 +1,805 @@
+"","id","phase","date","site","bait_take","species","prints_count","raven_visit_1_pa","raven_visit_1_time","raven_visit_2_pa","raven_visit_2_time","raven_visit_3_pa","raven_visit_3_time","fox_visit_1_pa","fox_visit_1_time","fox_visit_2_pa","fox_visit_2_time","fox_visit_3_pa","fox_visit_3_time","fox_visit_4_pa","fox_visit_4_time","fox_visit_5_pa","fox_visit_5_time","treatment","foxes","ravens","bait_notes","bait_yes","day_of_week","minimum_temperature_c","maximum_temperature_c","rainfall_mm","speed_of_maximum_wind_gust_km_h","fox_visit_pa","fox_visit_n","raven_visit_pa","raven_visit_n","study_day"
+"1",1,"1",2024-01-15,"F16",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"2",2,"1",2024-01-15,"F18",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"3",3,"1",2024-01-15,"F23",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"4",4,"1",2024-01-15,"F24",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"5",5,"1",2024-01-15,"F25",1,"Fox",2,0,NA,0,NA,0,NA,1,0.25625,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,1,1,0,0,1
+"6",6,"1",2024-01-15,"F26",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"7",7,"1",2024-01-15,"F29",1,"Fox",2,0,NA,0,NA,0,NA,1,0.264583333333333,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,1,1,0,0,1
+"8",8,"1",2024-01-15,"F30",1,"Fox",2,0,NA,0,NA,0,NA,1,0.0840277777777778,1,-2209051620,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,1,2,0,0,1
+"9",9,"1",2024-01-15,"F31",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"10",10,"1",2024-01-15,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.786111111111111,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,1,1,0,0,1
+"11",11,"1",2024-01-15,"F55",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"12",12,"1",2024-01-15,"F56",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"13",15,"1",2024-01-15,"F04",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"14",16,"1",2024-01-15,"F05",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"15",17,"1",2024-01-15,"F06",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"16",18,"1",2024-01-15,"F08",0,"Not taken",0,0,NA,0,NA,0,NA,1,0.970833333333333,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,1,1,0,0,1
+"17",19,"1",2024-01-15,"F12",0,"Not taken",0,0,NA,0,NA,0,NA,1,0.875694444444444,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,1,1,0,0,1
+"18",20,"1",2024-01-15,"F13",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"19",21,"1",2024-01-15,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"20",22,"1",2024-01-15,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"21",23,"1",2024-01-15,"F34",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.805555555555555,1,-2208999180,1,-2209068600,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,1,3,0,0,1
+"22",24,"1",2024-01-15,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"23",25,"1",2024-01-15,"F52",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"24",26,"1",2024-01-15,"F53",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"25",27,"1",2024-01-15,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"26",28,"1",2024-01-15,"F57",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"27",29,"1",2024-01-15,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"28",30,"1",2024-01-15,"F09",1,"Raven",0,0,NA,0,NA,0,NA,1,0.880555555555556,1,-2208995640,1,-2208990360,1,-2209059180,0,NA,"Control",NA,1,NA,"Yes","Monday",13.3,20.5,20.6,39,1,4,0,0,1
+"29",31,"1",2024-01-15,"F10",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"30",32,"1",2024-01-15,"F11",1,"Raven",1,1,-2209017060,0,NA,0,NA,1,0.345833333333333,1,-2209044960,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",13.3,20.5,20.6,39,1,2,1,1,1
+"31",33,"1",2024-01-15,"F14",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"32",34,"1",2024-01-15,"F22",1,"Raven",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"33",35,"1",2024-01-15,"F40",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"34",36,"1",2024-01-15,"F02",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"35",37,"1",2024-01-15,"F15",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"36",38,"1",2024-01-15,"F17",1,"Unknown",1,0,NA,0,NA,0,NA,1,0.2125,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,1,1,0,0,1
+"37",39,"1",2024-01-15,"F20",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"38",40,"1",2024-01-15,"F28",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"39",41,"1",2024-01-15,"F03",1,"Raven",NA,1,-2209040520,0,NA,0,NA,1,0.829861111111111,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,1,1,1,1,1
+"40",42,"1",2024-01-15,"F27",1,"Fox",1,1,-2209075200,0,NA,0,NA,0,0,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,1,1,1
+"41",43,"1",2024-01-15,"F32",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",13.3,20.5,20.6,39,0,0,0,0,1
+"42",44,"1",2024-01-16,"F05",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"43",45,"1",2024-01-16,"F06",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"44",46,"1",2024-01-16,"F09",1,"Fox",1,1,-2209045200,0,NA,0,NA,1,0.958333333333333,1,-2209070760,1,-2209064640,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,1,3,1,1,2
+"45",47,"1",2024-01-16,"F30",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"46",48,"1",2024-01-16,"F34",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"47",49,"1",2024-01-16,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"48",50,"1",2024-01-16,"F52",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"49",51,"1",2024-01-16,"F53",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"50",52,"1",2024-01-16,"F55",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"51",53,"1",2024-01-16,"F56",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"52",54,"1",2024-01-16,"F18",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"53",55,"1",2024-01-16,"F19",1,"Fox",0,0,NA,0,NA,0,NA,1,0.99375,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,1,1,0,0,2
+"54",56,"1",2024-01-16,"F23",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"55",57,"1",2024-01-16,"F24",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"56",58,"1",2024-01-16,"F04",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"57",59,"1",2024-01-16,"F08",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"58",60,"1",2024-01-16,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"59",61,"1",2024-01-16,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"60",62,"1",2024-01-16,"F22",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"61",63,"1",2024-01-16,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"62",64,"1",2024-01-16,"F27",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"63",65,"1",2024-01-16,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"64",66,"1",2024-01-16,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"65",67,"1",2024-01-16,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"66",68,"1",2024-01-16,"F57",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"67",69,"1",2024-01-16,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"68",70,"1",2024-01-16,"F03",1,"Raven",NA,1,-2209025940,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,1,1,2
+"69",71,"1",2024-01-16,"F07",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"70",72,"1",2024-01-16,"F10",1,"Raven",NA,1,-2209013160,1,-2209007520,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,1,2,2
+"71",73,"1",2024-01-16,"F11",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"72",74,"1",2024-01-16,"F12",1,"Raven",NA,1,-2209007160,1,-2209001580,1,-2209043280,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,1,3,2
+"73",75,"1",2024-01-16,"F13",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"74",76,"1",2024-01-16,"F14",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"75",77,"1",2024-01-16,"F16",1,"Raven",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"76",78,"1",2024-01-16,"F17",1,"Raven",0,0,NA,0,NA,0,NA,1,0.869444444444444,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,1,1,0,0,2
+"77",79,"1",2024-01-16,"F21",1,"Raven",1,0,NA,0,NA,0,NA,1,0.847916666666667,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",13.6,22.2,0.4,26,1,1,0,0,2
+"78",80,"1",2024-01-16,"F01",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.865277777777778,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,1,1,0,0,2
+"79",81,"1",2024-01-16,"F02",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"80",82,"1",2024-01-16,"F28",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"81",83,"1",2024-01-16,"F29",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"82",84,"1",2024-01-16,"F31",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"83",85,"1",2024-01-16,"F32",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"84",86,"1",2024-01-16,"F25",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",13.6,22.2,0.4,26,0,0,0,0,2
+"85",87,"1",2024-01-17,"F05",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"86",88,"1",2024-01-17,"F14",1,"Fox",NA,1,-2209046160,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,1,1,3
+"87",89,"1",2024-01-17,"F30",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"88",90,"1",2024-01-17,"F52",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.872916666666667,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,1,1,0,0,3
+"89",91,"1",2024-01-17,"F53",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.880555555555556,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,1,1,0,0,3
+"90",92,"1",2024-01-17,"F55",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.295833333333333,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,1,1,0,0,3
+"91",93,"1",2024-01-17,"F23",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"92",94,"1",2024-01-17,"F24",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"93",95,"1",2024-01-17,"F25",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"94",96,"1",2024-01-17,"F31",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"95",97,"1",2024-01-17,"F34",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"96",98,"1",2024-01-17,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"97",99,"1",2024-01-17,"F08",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"98",100,"1",2024-01-17,"F16",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"99",101,"1",2024-01-17,"F17",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"100",102,"1",2024-01-17,"F18",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"101",103,"1",2024-01-17,"F19",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"102",104,"1",2024-01-17,"F20",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"103",105,"1",2024-01-17,"F21",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"104",106,"1",2024-01-17,"F22",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"105",107,"1",2024-01-17,"F26",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"106",108,"1",2024-01-17,"F40",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"107",109,"1",2024-01-17,"F48",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"108",110,"1",2024-01-17,"F54",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"109",111,"1",2024-01-17,"F57",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"110",112,"1",2024-01-17,"F58",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"111",113,"1",2024-01-17,"F01",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.114583333333333,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",13.9,22.6,2.6,41,1,1,0,0,3
+"112",114,"1",2024-01-17,"F04",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"113",115,"1",2024-01-17,"F06",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.677777777777778,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",13.9,22.6,2.6,41,1,1,0,0,3
+"114",116,"1",2024-01-17,"F09",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"115",117,"1",2024-01-17,"F10",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"116",118,"1",2024-01-17,"F11",1,"Raven",NA,1,-2209039260,1,-2209045620,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,1,2,3
+"117",119,"1",2024-01-17,"F12",1,"Raven",NA,1,-2209049700,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,1,1,3
+"118",120,"1",2024-01-17,"F02",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"119",121,"1",2024-01-17,"F03",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"120",122,"1",2024-01-17,"F07",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"121",123,"1",2024-01-17,"F13",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"122",124,"1",2024-01-17,"F15",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.139583333333333,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,1,1,0,0,3
+"123",125,"1",2024-01-17,"F27",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.756944444444445,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,1,1,0,0,3
+"124",126,"1",2024-01-17,"F28",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"125",127,"1",2024-01-17,"F29",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"126",128,"1",2024-01-17,"F56",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"127",129,"1",2024-01-17,"F32",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",13.9,22.6,2.6,41,0,0,0,0,3
+"128",130,"1",2024-01-18,"F05",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"129",131,"1",2024-01-18,"F15",0,"Fox",0,0,NA,0,NA,0,NA,1,0.025,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"No","Thursday",17.4,24.7,7.8,50,1,1,0,0,4
+"130",132,"1",2024-01-18,"F16",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"131",133,"1",2024-01-18,"F23",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"132",134,"1",2024-01-18,"F24",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"133",135,"1",2024-01-18,"F29",1,"Fox",0,0,NA,0,NA,0,NA,1,0.816666666666667,1,-2209070040,1,-2209066740,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,1,3,0,0,4
+"134",136,"1",2024-01-18,"F30",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"135",137,"1",2024-01-18,"F31",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"136",138,"1",2024-01-18,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"137",139,"1",2024-01-18,"F52",1,"Fox",0,0,NA,0,NA,0,NA,1,0.802777777777778,1,-2209002300,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,1,2,0,0,4
+"138",140,"1",2024-01-18,"F53",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"139",141,"1",2024-01-18,"F56",1,"Fox",1,0,NA,0,NA,0,NA,1,0.855555555555556,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,1,1,0,0,4
+"140",143,"1",2024-01-18,"F04",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"141",144,"1",2024-01-18,"F13",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"142",145,"1",2024-01-18,"F14",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"143",146,"1",2024-01-18,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"144",147,"1",2024-01-18,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"145",148,"1",2024-01-18,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"146",149,"1",2024-01-18,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"147",150,"1",2024-01-18,"F22",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"148",151,"1",2024-01-18,"F25",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"149",152,"1",2024-01-18,"F26",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"150",153,"1",2024-01-18,"F27",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"151",154,"1",2024-01-18,"F34",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"152",155,"1",2024-01-18,"F40",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"153",156,"1",2024-01-18,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"154",157,"1",2024-01-18,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"155",158,"1",2024-01-18,"F55",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"156",159,"1",2024-01-18,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"157",160,"1",2024-01-18,"F02",1,"Raven",0,1,-2209007580,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,1,1,4
+"158",161,"1",2024-01-18,"F06",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"159",162,"1",2024-01-18,"F08",1,"Raven",0,1,-2209015680,1,-2209006680,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,1,2,4
+"160",163,"1",2024-01-18,"F09",1,"Raven",1,0,NA,0,NA,0,NA,1,0.882638888888889,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",17.4,24.7,7.8,50,1,1,0,0,4
+"161",164,"1",2024-01-18,"F12",1,"Raven",0,1,-2209040520,0,NA,0,NA,1,0.297916666666667,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",17.4,24.7,7.8,50,1,1,1,1,4
+"162",165,"1",2024-01-18,"F17",1,"Raven",0,1,-2209051860,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,1,1,4
+"163",166,"1",2024-01-18,"F57",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"164",168,"1",2024-01-18,"F03",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"165",169,"1",2024-01-18,"F07",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"166",170,"1",2024-01-18,"F11",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"167",171,"1",2024-01-18,"F28",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"168",172,"1",2024-01-18,"F32",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",17.4,24.7,7.8,50,0,0,0,0,4
+"169",216,"2",2024-01-22,"F23",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"170",217,"2",2024-01-22,"F24",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"171",218,"2",2024-01-22,"F25",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"172",219,"2",2024-01-22,"F31",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"173",220,"2",2024-01-22,"F53",1,"Fox",1,0,NA,0,NA,0,NA,1,0.983333333333333,1,-2209074780,1,-2209069620,1,-2209057680,0,NA,"Control",1,NA,NA,"Yes","Monday",11.7,25.9,0,44,1,4,0,0,8
+"174",221,"2",2024-01-22,"F03",0,"Not taken",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"175",222,"2",2024-01-22,"F13",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"176",223,"2",2024-01-22,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"177",224,"2",2024-01-22,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"178",225,"2",2024-01-22,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"179",226,"2",2024-01-22,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"180",227,"2",2024-01-22,"F22",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"181",228,"2",2024-01-22,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"182",229,"2",2024-01-22,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"183",230,"2",2024-01-22,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"184",231,"2",2024-01-22,"F55",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"185",232,"2",2024-01-22,"F57",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"186",233,"2",2024-01-22,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.7,25.9,0,44,0,0,0,0,8
+"187",234,"2",2024-01-22,"F02",1,"Raven",0,1,-2209038780,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",11.7,25.9,0,44,0,0,1,1,8
+"188",235,"2",2024-01-22,"F04",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"189",236,"2",2024-01-22,"F09",1,"Raven",1,1,-2209030020,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",11.7,25.9,0,44,0,0,1,1,8
+"190",237,"2",2024-01-22,"F12",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"191",238,"2",2024-01-22,"F16",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.0416666666666667,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",11.7,25.9,0,44,1,1,0,0,8
+"192",239,"2",2024-01-22,"F17",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"193",240,"2",2024-01-22,"F26",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,"PE","Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"194",241,"2",2024-01-22,"F01",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"195",242,"2",2024-01-22,"F05",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"196",243,"2",2024-01-22,"F06",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"197",244,"2",2024-01-22,"F07",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"198",245,"2",2024-01-22,"F08",1,"Unknown",NA,1,-2209009320,0,NA,0,NA,1,0.971527777777778,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,1,1,1,1,8
+"199",246,"2",2024-01-22,"F10",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"200",247,"2",2024-01-22,"F11",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"201",248,"2",2024-01-22,"F14",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"202",249,"2",2024-01-22,"F15",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"203",250,"2",2024-01-22,"F27",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"204",251,"2",2024-01-22,"F28",1,"Unknown",1,0,NA,0,NA,0,NA,1,0.825,1,-2209056000,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,1,2,0,0,8
+"205",252,"2",2024-01-22,"F29",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"206",253,"2",2024-01-22,"F30",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"207",254,"2",2024-01-22,"F32",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.888888888888889,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,1,1,0,0,8
+"208",255,"2",2024-01-22,"F34",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"209",256,"2",2024-01-22,"F35",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"210",257,"2",2024-01-22,"F52",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"211",258,"2",2024-01-22,"F56",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.7,25.9,0,44,0,0,0,0,8
+"212",259,"2",2024-01-23,"F05",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"213",260,"2",2024-01-23,"F12",1,"Fox",2,0,NA,0,NA,0,NA,1,0.927083333333333,1,-2209066800,1,-2209059840,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,1,3,0,0,9
+"214",261,"2",2024-01-23,"F22",1,"Fox",1,0,NA,0,NA,0,NA,1,0.223611111111111,1,-2209053180,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,1,2,0,0,9
+"215",262,"2",2024-01-23,"F29",1,"Fox",3,0,NA,0,NA,0,NA,1,0.958333333333333,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,1,1,0,0,9
+"216",263,"2",2024-01-23,"F30",1,"Fox",1,0,NA,0,NA,0,NA,1,0.0402777777777778,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,1,1,0,0,9
+"217",264,"2",2024-01-23,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.393055555555556,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,1,1,0,0,9
+"218",265,"2",2024-01-23,"F52",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"219",266,"2",2024-01-23,"F53",1,"Fox",1,0,NA,0,NA,0,NA,1,0.886111111111111,1,-2208997620,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,1,2,0,0,9
+"220",267,"2",2024-01-23,"F55",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"221",268,"2",2024-01-23,"F10",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"222",269,"2",2024-01-23,"F13",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"223",270,"2",2024-01-23,"F14",0,"Not taken",0,0,NA,0,NA,0,NA,1,0.866666666666667,1,-2208994560,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,1,2,0,0,9
+"224",271,"2",2024-01-23,"F15",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"225",272,"2",2024-01-23,"F16",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"226",273,"2",2024-01-23,"F17",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"227",274,"2",2024-01-23,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"228",275,"2",2024-01-23,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"229",276,"2",2024-01-23,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"230",277,"2",2024-01-23,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"231",278,"2",2024-01-23,"F23",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"232",279,"2",2024-01-23,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"233",280,"2",2024-01-23,"F25",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"234",281,"2",2024-01-23,"F26",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"235",282,"2",2024-01-23,"F34",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"236",283,"2",2024-01-23,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"237",284,"2",2024-01-23,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"238",285,"2",2024-01-23,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"239",286,"2",2024-01-23,"F56",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"240",287,"2",2024-01-23,"F57",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"241",288,"2",2024-01-23,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"242",289,"2",2024-01-23,"F01",1,"Raven",0,1,-2209015500,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,1,1,9
+"243",290,"2",2024-01-23,"F03",1,"Raven",NA,1,-2209043100,1,-2209042800,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,1,2,9
+"244",291,"2",2024-01-23,"F04",1,"Raven",1,1,-2209048560,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,1,1,9
+"245",292,"2",2024-01-23,"F06",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.844444444444444,1,-2209000440,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",14.9,26.7,0,30,1,2,0,0,9
+"246",293,"2",2024-01-23,"F09",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"247",294,"2",2024-01-23,"F27",1,"Raven",NA,1,-2209044660,1,-2209041600,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,1,2,9
+"248",295,"2",2024-01-23,"F02",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.0381944444444444,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,1,1,0,0,9
+"249",296,"2",2024-01-23,"F07",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"250",297,"2",2024-01-23,"F08",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"251",298,"2",2024-01-23,"F11",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"252",299,"2",2024-01-23,"F28",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"253",300,"2",2024-01-23,"F31",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"254",301,"2",2024-01-23,"F32",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",14.9,26.7,0,30,0,0,0,0,9
+"255",302,"2",2024-01-24,"F05",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"256",303,"2",2024-01-24,"F30",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"257",304,"2",2024-01-24,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"258",305,"2",2024-01-24,"F53",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.935416666666667,1,-2208989280,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,1,2,0,0,10
+"259",306,"2",2024-01-24,"F54",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"260",307,"2",2024-01-24,"F55",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.964583333333333,1,-2209073400,1,-2209057980,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,1,3,0,0,10
+"261",308,"2",2024-01-24,"F04",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"262",309,"2",2024-01-24,"F14",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"263",310,"2",2024-01-24,"F15",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"264",311,"2",2024-01-24,"F16",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"265",312,"2",2024-01-24,"F18",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"266",313,"2",2024-01-24,"F19",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"267",314,"2",2024-01-24,"F20",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"268",315,"2",2024-01-24,"F21",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"269",316,"2",2024-01-24,"F22",0,"Not taken",NA,0,NA,0,NA,0,NA,1,0.210416666666667,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,1,1,0,0,10
+"270",317,"2",2024-01-24,"F23",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"271",318,"2",2024-01-24,"F24",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"272",319,"2",2024-01-24,"F25",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"273",320,"2",2024-01-24,"F26",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"274",321,"2",2024-01-24,"F27",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"275",322,"2",2024-01-24,"F31",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"276",323,"2",2024-01-24,"F34",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"277",324,"2",2024-01-24,"F40",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"278",325,"2",2024-01-24,"F48",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"279",326,"2",2024-01-24,"F57",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"280",327,"2",2024-01-24,"F58",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"281",328,"2",2024-01-24,"F01",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"282",329,"2",2024-01-24,"F02",1,"Raven",NA,1,-2209043460,0,NA,0,NA,1,0.953472222222222,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",12.1,27.5,0,35,1,1,1,1,10
+"283",330,"2",2024-01-24,"F06",1,"Raven",NA,1,-2209025940,0,NA,0,NA,1,0.756944444444445,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",12.1,27.5,0,35,1,1,1,1,10
+"284",331,"2",2024-01-24,"F09",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.980555555555556,1,-2209057500,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,1,2,0,0,10
+"285",332,"2",2024-01-24,"F10",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"286",333,"2",2024-01-24,"F12",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.05625,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",12.1,27.5,0,35,1,1,0,0,10
+"287",334,"2",2024-01-24,"F52",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"288",336,"2",2024-01-24,"F07",1,"Unknown",NA,1,-2209033080,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,1,1,10
+"289",339,"2",2024-01-24,"F13",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"290",340,"2",2024-01-24,"F17",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"291",341,"2",2024-01-24,"F28",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,0,0,0,0,10
+"292",342,"2",2024-01-24,"F29",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.736111111111111,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",12.1,27.5,0,35,1,1,0,0,10
+"293",345,"2",2024-01-25,"F02",1,"Fox",2,0,NA,0,NA,0,NA,1,0.247222222222222,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,"PE","Yes","Thursday",17.2,30.1,0,26,1,1,0,0,11
+"294",346,"2",2024-01-25,"F04",1,"Fox",2,0,NA,0,NA,0,NA,1,0.0541666666666667,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.2,30.1,0,26,1,1,0,0,11
+"295",347,"2",2024-01-25,"F09",1,"Fox",3,0,NA,0,NA,0,NA,1,0.0958333333333333,1,-2209056300,0,NA,0,NA,0,NA,"Treatment",1,1,NA,"Yes","Thursday",17.2,30.1,0,26,1,2,0,0,11
+"296",348,"2",2024-01-25,"F29",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"297",349,"2",2024-01-25,"F35",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"298",350,"2",2024-01-25,"F52",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.853472222222222,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.2,30.1,0,26,1,1,0,0,11
+"299",351,"2",2024-01-25,"F53",1,"Fox",2,0,NA,0,NA,0,NA,1,0.854861111111111,1,-2208992760,1,-2209055760,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.2,30.1,0,26,1,3,0,0,11
+"300",352,"2",2024-01-25,"F55",1,"Fox",1,0,NA,0,NA,0,NA,1,0.192361111111111,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",17.2,30.1,0,26,1,1,0,0,11
+"301",353,"2",2024-01-25,"F08",0,"Not taken",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"302",354,"2",2024-01-25,"F10",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"303",355,"2",2024-01-25,"F13",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"304",356,"2",2024-01-25,"F14",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"305",357,"2",2024-01-25,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"306",358,"2",2024-01-25,"F16",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"307",359,"2",2024-01-25,"F17",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"308",360,"2",2024-01-25,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"309",361,"2",2024-01-25,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"310",362,"2",2024-01-25,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"311",363,"2",2024-01-25,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"312",364,"2",2024-01-25,"F22",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"313",365,"2",2024-01-25,"F23",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"314",366,"2",2024-01-25,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"315",367,"2",2024-01-25,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"316",368,"2",2024-01-25,"F27",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"317",369,"2",2024-01-25,"F31",0,"Not taken",0,1,-2209028940,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,1,1,11
+"318",370,"2",2024-01-25,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"319",371,"2",2024-01-25,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"320",372,"2",2024-01-25,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"321",373,"2",2024-01-25,"F57",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"322",374,"2",2024-01-25,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"323",375,"2",2024-01-25,"F12",1,"Raven",3,0,NA,0,NA,0,NA,1,0.178472222222222,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",17.2,30.1,0,26,1,1,0,0,11
+"324",376,"2",2024-01-25,"F25",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"325",377,"2",2024-01-25,"F01",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"326",378,"2",2024-01-25,"F03",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"327",379,"2",2024-01-25,"F05",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"328",381,"2",2024-01-25,"F07",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.0215277777777778,1,-2209061700,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,1,2,0,0,11
+"329",382,"2",2024-01-25,"F11",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"330",383,"2",2024-01-25,"F28",1,"Unknown",2,0,NA,0,NA,0,NA,1,0.810416666666667,1,-2208988980,1,-2209065420,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,1,3,0,0,11
+"331",384,"2",2024-01-25,"F30",1,"Unknown",1,0,NA,0,NA,0,NA,1,0.757638888888889,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,1,1,0,0,11
+"332",385,"2",2024-01-25,"F32",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"333",386,"2",2024-01-25,"F34",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"334",387,"2",2024-01-25,"F56",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",17.2,30.1,0,26,0,0,0,0,11
+"335",431,"2",2024-01-29,"F02",1,"Fox",2,0,NA,0,NA,0,NA,1,0.909027777777778,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,1,1,0,0,15
+"336",432,"2",2024-01-29,"F05",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"337",433,"2",2024-01-29,"F07",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"338",434,"2",2024-01-29,"F10",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"339",435,"2",2024-01-29,"F12",1,"Fox",2,0,NA,0,NA,0,NA,1,0.0263888888888889,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,1,1,0,0,15
+"340",436,"2",2024-01-29,"F20",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"341",437,"2",2024-01-29,"F24",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"342",438,"2",2024-01-29,"F25",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"343",439,"2",2024-01-29,"F29",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.820833333333333,1,-2208996720,1,-2209051680,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,1,3,0,0,15
+"344",440,"2",2024-01-29,"F35",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"345",441,"2",2024-01-29,"F52",1,"Fox",2,0,NA,0,NA,0,NA,1,0.114583333333333,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,1,1,0,0,15
+"346",442,"2",2024-01-29,"F53",1,"Fox",2,0,NA,0,NA,0,NA,1,0.784722222222222,1,-2208997620,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,1,2,0,0,15
+"347",443,"2",2024-01-29,"F56",1,"Fox",1,0,NA,0,NA,0,NA,1,0.95,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",14.5,31.5,0,41,1,1,0,0,15
+"348",444,"2",2024-01-29,"F03",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"349",445,"2",2024-01-29,"F04",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"350",446,"2",2024-01-29,"F11",0,"Not taken",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"351",447,"2",2024-01-29,"F14",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"352",448,"2",2024-01-29,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"353",449,"2",2024-01-29,"F17",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"354",450,"2",2024-01-29,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"355",451,"2",2024-01-29,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"356",452,"2",2024-01-29,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"357",453,"2",2024-01-29,"F22",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"358",454,"2",2024-01-29,"F23",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"359",455,"2",2024-01-29,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"360",456,"2",2024-01-29,"F27",0,"Not taken",NA,0,NA,0,NA,0,NA,1,0.115277777777778,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,1,1,0,0,15
+"361",457,"2",2024-01-29,"F31",0,"Not taken",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"362",458,"2",2024-01-29,"F34",0,"Not taken",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"363",459,"2",2024-01-29,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"364",460,"2",2024-01-29,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"365",461,"2",2024-01-29,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"366",462,"2",2024-01-29,"F57",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"367",463,"2",2024-01-29,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"368",464,"2",2024-01-29,"F01",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"369",465,"2",2024-01-29,"F08",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"370",466,"2",2024-01-29,"F09",1,"Raven",2,1,-2209003800,1,-2209051440,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,"PE","Yes","Monday",14.5,31.5,0,41,0,0,1,2,15
+"371",467,"2",2024-01-29,"F16",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"372",468,"2",2024-01-29,NA,1,"Raven",NA,0,NA,0,NA,0,NA,1,0.980555555555556,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",14.5,31.5,0,41,1,1,0,0,15
+"373",469,"2",2024-01-29,"F06",0,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",14.5,31.5,0,41,0,0,0,0,15
+"374",470,"2",2024-01-29,"F13",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"375",471,"2",2024-01-29,"F28",1,"Unknown",3,0,NA,0,NA,0,NA,1,0.876388888888889,1,-2209050720,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",14.5,31.5,0,41,1,2,0,0,15
+"376",472,"2",2024-01-29,"F30",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"377",473,"2",2024-01-29,"F32",1,"Unknown",1,0,NA,0,NA,0,NA,1,0.986111111111111,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",14.5,31.5,0,41,1,1,0,0,15
+"378",474,"2",2024-01-29,"F55",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",14.5,31.5,0,41,0,0,0,0,15
+"379",475,"2",2024-01-30,"F05",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"380",476,"2",2024-01-30,"F29",1,"Fox",0,0,NA,0,NA,0,NA,1,0.802083333333333,1,-2209073400,1,-2209063080,1,-2209060560,1,1899-12-31 06:18:00,"Treatment",1,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,1,5,0,0,16
+"381",477,"2",2024-01-30,"F30",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"382",478,"2",2024-01-30,"F32",1,"Fox",1,0,NA,0,NA,0,NA,1,0.134722222222222,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,1,1,0,0,16
+"383",479,"2",2024-01-30,"F35",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"384",480,"2",2024-01-30,"F52",1,"Fox",1,0,NA,0,NA,0,NA,1,0.877083333333333,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,1,1,0,0,16
+"385",481,"2",2024-01-30,"F53",1,"Fox",0,0,NA,0,NA,0,NA,1,0.7625,1,-2209000620,1,-2208992820,1,-2209068660,0,NA,"Control",1,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,1,4,0,0,16
+"386",482,"2",2024-01-30,"F56",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"387",483,"2",2024-01-30,"F03",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"388",484,"2",2024-01-30,"F04",1,"Unknown",0,0,NA,0,NA,0,NA,1,0.144444444444444,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,1,1,0,0,16
+"389",485,"2",2024-01-30,"F11",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"390",486,"2",2024-01-30,"F14",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"391",487,"2",2024-01-30,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"392",488,"2",2024-01-30,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"393",489,"2",2024-01-30,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"394",490,"2",2024-01-30,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"395",491,"2",2024-01-30,"F22",0,"Not taken",0,0,NA,0,NA,0,NA,1,0.215277777777778,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,1,1,0,0,16
+"396",492,"2",2024-01-30,"F23",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"397",493,"2",2024-01-30,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"398",494,"2",2024-01-30,"F25",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"399",495,"2",2024-01-30,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"400",496,"2",2024-01-30,"F31",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"401",497,"2",2024-01-30,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"402",498,"2",2024-01-30,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"403",499,"2",2024-01-30,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"404",500,"2",2024-01-30,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"405",501,"2",2024-01-30,"F06",1,"Raven",0,0,NA,0,NA,0,NA,1,0.99375,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,1,1,0,0,16
+"406",502,"2",2024-01-30,"F08",1,"Raven",0,1,-2209035000,0,NA,0,NA,1,0.141666666666667,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,1,1,1,1,16
+"407",503,"2",2024-01-30,"F09",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"408",504,"2",2024-01-30,"F10",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,"PE","Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"409",505,"2",2024-01-30,"F12",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"410",506,"2",2024-01-30,"F13",1,"Raven",0,1,-2209026720,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,1,1,16
+"411",507,"2",2024-01-30,"F16",1,"Raven",0,1,-2209007280,1,-2209033920,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,1,2,16
+"412",508,"2",2024-01-30,"F18",1,"Raven",0,1,-2209023060,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,"PE","Yes","Tuesday",12.9,28.6,0,30,0,0,1,1,16
+"413",509,"2",2024-01-30,"F27",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"414",510,"2",2024-01-30,"F57",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"415",511,"2",2024-01-30,NA,1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"416",512,"2",2024-01-30,"F01",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"417",513,"2",2024-01-30,"F02",1,"Unknown",3,0,NA,0,NA,0,NA,1,0.155555555555556,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,1,1,0,0,16
+"418",514,"2",2024-01-30,"F07",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"419",515,"2",2024-01-30,"F17",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"420",516,"2",2024-01-30,"F28",1,"Unknown",2,0,NA,0,NA,0,NA,1,0.854166666666667,1,-2208991800,1,-2209073700,1,-2209055040,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,1,4,0,0,16
+"421",517,"2",2024-01-30,"F34",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"422",518,"2",2024-01-30,"F55",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",12.9,28.6,0,30,0,0,0,0,16
+"423",519,"2",2024-01-31,"F05",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"424",520,"2",2024-01-31,"F11",1,"Fox",1,0,NA,0,NA,0,NA,1,0.268055555555556,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,1,1,0,0,17
+"425",521,"2",2024-01-31,"F12",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"426",522,"2",2024-01-31,"F31",1,"Fox",0,1,-2209044600,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,1,1,17
+"427",523,"2",2024-01-31,"F35",1,"Fox",3,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"428",524,"2",2024-01-31,"F53",1,"Fox",1,0,NA,0,NA,0,NA,1,0.781944444444444,1,-2209001340,1,-2208992100,1,-2209070580,0,NA,"Control",1,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,1,4,0,0,17
+"429",525,"2",2024-01-31,"F55",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"430",526,"2",2024-01-31,"F56",1,"Fox",1,0,NA,0,NA,0,NA,1,0.110416666666667,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,1,1,0,0,17
+"431",527,"2",2024-01-31,"F03",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"432",528,"2",2024-01-31,"F10",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"433",529,"2",2024-01-31,"F13",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"434",530,"2",2024-01-31,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"435",531,"2",2024-01-31,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"436",532,"2",2024-01-31,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"437",533,"2",2024-01-31,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"438",534,"2",2024-01-31,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"439",535,"2",2024-01-31,"F22",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"440",536,"2",2024-01-31,"F23",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"441",537,"2",2024-01-31,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"442",538,"2",2024-01-31,"F25",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"443",539,"2",2024-01-31,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"444",540,"2",2024-01-31,"F30",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"445",541,"2",2024-01-31,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"446",542,"2",2024-01-31,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"447",543,"2",2024-01-31,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"448",544,"2",2024-01-31,"F57",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"449",545,"2",2024-01-31,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"450",546,"2",2024-01-31,"F01",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"451",547,"2",2024-01-31,"F04",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"452",548,"2",2024-01-31,"F06",1,"Raven",1,0,NA,0,NA,0,NA,1,0.834722222222222,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",18.2,26.2,0.4,48,1,1,0,0,17
+"453",549,"2",2024-01-31,"F09",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"454",550,"2",2024-01-31,"F14",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,"PE","Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"455",551,"2",2024-01-31,"F16",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"456",552,"2",2024-01-31,"F27",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"457",553,"2",2024-01-31,"F52",1,"Raven",2,1,-2209021800,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,1,1,17
+"458",554,"2",2024-01-31,NA,1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"459",555,"2",2024-01-31,"F02",1,"Unknown",1,0,NA,0,NA,0,NA,1,0.972916666666667,1,-2209070340,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Wednesday",18.2,26.2,0.4,48,1,2,0,0,17
+"460",556,"2",2024-01-31,"F07",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"461",557,"2",2024-01-31,"F08",1,"Unknown",2,0,NA,0,NA,0,NA,1,0.0666666666666667,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,1,1,0,0,17
+"462",558,"2",2024-01-31,"F17",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"463",559,"2",2024-01-31,"F28",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"464",560,"2",2024-01-31,"F29",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"465",561,"2",2024-01-31,"F32",1,"Unknown",1,0,NA,0,NA,0,NA,1,0.977083333333333,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,1,1,0,0,17
+"466",562,"2",2024-01-31,"F34",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",18.2,26.2,0.4,48,0,0,0,0,17
+"467",563,"2",2024-02-01,"F12",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.147222222222222,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",16,31.5,0,39,1,1,0,0,18
+"468",564,"2",2024-02-01,"F23",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"469",565,"2",2024-02-01,"F34",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.222916666666667,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Thursday",16,31.5,0,39,1,1,0,0,18
+"470",566,"2",2024-02-01,"F35",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"471",567,"2",2024-02-01,"F52",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"472",568,"2",2024-02-01,"F53",1,"Fox",2,0,NA,0,NA,0,NA,1,0.75,1,-2209000980,1,-2209058880,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",16,31.5,0,39,1,3,0,0,18
+"473",569,"2",2024-02-01,"F56",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"474",570,"2",2024-02-01,"F05",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"475",571,"2",2024-02-01,"F13",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"476",572,"2",2024-02-01,"F14",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"477",573,"2",2024-02-01,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"478",574,"2",2024-02-01,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"479",575,"2",2024-02-01,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"480",576,"2",2024-02-01,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"481",577,"2",2024-02-01,"F22",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"482",578,"2",2024-02-01,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"483",579,"2",2024-02-01,"F25",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"484",580,"2",2024-02-01,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"485",581,"2",2024-02-01,"F27",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"486",582,"2",2024-02-01,"F31",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"487",583,"2",2024-02-01,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"488",584,"2",2024-02-01,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"489",585,"2",2024-02-01,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"490",586,"2",2024-02-01,"F55",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"491",587,"2",2024-02-01,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",16,31.5,0,39,0,0,0,0,18
+"492",588,"2",2024-02-01,"F01",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"493",589,"2",2024-02-01,"F03",1,"Raven",NA,1,-2209038120,1,-2209050840,0,NA,1,0.23125,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",16,31.5,0,39,1,1,1,2,18
+"494",590,"2",2024-02-01,"F06",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"495",591,"2",2024-02-01,"F08",1,"Raven",0,0,NA,0,NA,0,NA,1,0.14375,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",16,31.5,0,39,1,1,0,0,18
+"496",592,"2",2024-02-01,"F09",1,"Raven",2,1,-2209044540,0,NA,0,NA,1,0.866666666666667,1,-2208993000,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",16,31.5,0,39,1,2,1,1,18
+"497",593,"2",2024-02-01,"F17",1,"Raven",0,1,-2209020240,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,"PE","Yes","Thursday",16,31.5,0,39,0,0,1,1,18
+"498",594,"2",2024-02-01,"F57",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"499",595,"2",2024-02-01,NA,1,"Raven",NA,1,-2209044600,0,NA,0,NA,1,0.869444444444444,1,-2208993000,0,NA,0,NA,0,NA,"Treatment",NA,1,"PE","Yes","Thursday",16,31.5,0,39,1,2,1,1,18
+"500",596,"2",2024-02-01,"F02",1,"Unknown",4,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"501",597,"2",2024-02-01,"F04",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"502",598,"2",2024-02-01,"F07",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"503",599,"2",2024-02-01,"F10",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"504",600,"2",2024-02-01,"F11",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"505",601,"2",2024-02-01,"F16",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"506",602,"2",2024-02-01,"F18",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"507",603,"2",2024-02-01,"F28",1,"Unknown",3,0,NA,0,NA,0,NA,1,0.025,1,-2209050600,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,1,2,0,0,18
+"508",604,"2",2024-02-01,"F29",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"509",605,"2",2024-02-01,"F30",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"510",606,"2",2024-02-01,"F32",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",16,31.5,0,39,0,0,0,0,18
+"511",650,"2",2024-02-05,"F29",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.629166666666667,1,-2208999420,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",19.4,22.5,2,41,1,2,0,0,22
+"512",651,"2",2024-02-05,"F05",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"513",652,"2",2024-02-05,"F14",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"514",653,"2",2024-02-05,"F16",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"515",654,"2",2024-02-05,"F19",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"516",655,"2",2024-02-05,"F12",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"517",656,"2",2024-02-05,"F23",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"518",657,"2",2024-02-05,"F24",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"519",658,"2",2024-02-05,"F25",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"520",659,"2",2024-02-05,"F26",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"521",660,"2",2024-02-05,"F27",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"522",661,"2",2024-02-05,"F32",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"523",662,"2",2024-02-05,"F34",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"524",663,"2",2024-02-05,"F35",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"525",664,"2",2024-02-05,"F40",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"526",665,"2",2024-02-05,"F48",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"527",666,"2",2024-02-05,"F52",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"528",667,"2",2024-02-05,"F56",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"529",668,"2",2024-02-05,"F58",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"530",669,"2",2024-02-05,"F03",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"531",670,"2",2024-02-05,"F04",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"532",671,"2",2024-02-05,"F08",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"533",672,"2",2024-02-05,"F09",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.227777777777778,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",19.4,22.5,2,41,1,1,0,0,22
+"534",673,"2",2024-02-05,"F10",1,"Raven",NA,1,-2209039380,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,"PE","Yes","Monday",19.4,22.5,2,41,0,0,1,1,22
+"535",674,"2",2024-02-05,"F12",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"536",675,"2",2024-02-05,"F20",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"537",676,"2",2024-02-05,"F54",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"538",677,"2",2024-02-05,"?",0,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"539",678,"2",2024-02-05,"F01",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"540",679,"2",2024-02-05,"F02",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"541",680,"2",2024-02-05,"F06",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"542",681,"2",2024-02-05,"F07",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"543",682,"2",2024-02-05,"F11",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"544",683,"2",2024-02-05,"F13",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"545",684,"2",2024-02-05,"F15",0,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,0,0,0,0,22
+"546",685,"2",2024-02-05,"F17",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"547",686,"2",2024-02-05,"F18",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"548",687,"2",2024-02-05,"F21",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"549",688,"2",2024-02-05,"F28",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.836805555555555,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,1,1,0,0,22
+"550",689,"2",2024-02-05,"F30",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"551",690,"2",2024-02-05,"F31",0,"Unknown",NA,0,NA,0,NA,0,NA,1,0.0722222222222222,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",19.4,22.5,2,41,1,1,0,0,22
+"552",691,"2",2024-02-05,"F53",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"553",692,"2",2024-02-05,"F55",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"554",693,"2",2024-02-05,"F57",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",19.4,22.5,2,41,0,0,0,0,22
+"555",694,"2",2024-02-06,"?",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"556",695,"2",2024-02-06,"F05",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"557",696,"2",2024-02-06,"F06",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"558",697,"2",2024-02-06,"F08",1,"Fox",0,0,NA,0,NA,0,NA,1,0.879861111111111,1,-2208997800,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,1,2,0,0,23
+"559",698,"2",2024-02-06,"F15",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"560",699,"2",2024-02-06,"F16",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"561",700,"2",2024-02-06,"F21",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"562",701,"2",2024-02-06,"F23",1,"Fox",1,0,NA,0,NA,0,NA,1,0.115972222222222,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,1,1,0,0,23
+"563",702,"2",2024-02-06,"F25",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"564",703,"2",2024-02-06,"F28",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.398611111111111,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,1,1,0,0,23
+"565",704,"2",2024-02-06,"F29",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.711111111111111,1,-2209011840,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,1,2,0,0,23
+"566",705,"2",2024-02-06,"F31",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"567",706,"2",2024-02-06,"F32",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"568",707,"2",2024-02-06,"F34",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"569",708,"2",2024-02-06,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"570",709,"2",2024-02-06,"F52",1,"Fox",3,0,NA,0,NA,0,NA,1,0.232638888888889,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,1,1,0,0,23
+"571",710,"2",2024-02-06,"F53",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.86875,1,-2208999540,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,1,2,0,0,23
+"572",711,"2",2024-02-06,"F54",1,"Fox",1,0,NA,0,NA,0,NA,1,0.136805555555556,1,-2209057800,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,1,2,0,0,23
+"573",712,"2",2024-02-06,"F56",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"574",713,"2",2024-02-06,"F10",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"575",714,"2",2024-02-06,"F11",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"576",715,"2",2024-02-06,"F13",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"577",716,"2",2024-02-06,"F14",0,"Not taken",2,0,NA,0,NA,0,NA,1,0.00347222222222222,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,1,1,0,0,23
+"578",717,"2",2024-02-06,"F18",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"579",718,"2",2024-02-06,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"580",719,"2",2024-02-06,"F12",0,"Not taken",0,1,-2209027140,0,NA,0,NA,1,0.954166666666667,1,-2209066740,1,-2209066380,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,1,3,1,1,23
+"581",720,"2",2024-02-06,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"582",721,"2",2024-02-06,"F27",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"583",722,"2",2024-02-06,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"584",723,"2",2024-02-06,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"585",724,"2",2024-02-06,"F01",1,"Raven",0,0,NA,0,NA,0,NA,1,0.197916666666667,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",18.2,26.7,30.6,31,1,1,0,0,23
+"586",725,"2",2024-02-06,"F03",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"587",726,"2",2024-02-06,"F04",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"588",727,"2",2024-02-06,"F09",1,"Raven",NA,1,-2209005240,0,NA,0,NA,1,0.942361111111111,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,"PE","Yes","Tuesday",18.2,26.7,30.6,31,1,1,1,1,23
+"589",728,"2",2024-02-06,"F19",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"590",729,"2",2024-02-06,"F58",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"591",730,"2",2024-02-06,"F02",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.876388888888889,1,-2209046100,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Tuesday",18.2,26.7,30.6,31,1,2,0,0,23
+"592",731,"2",2024-02-06,"F07",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"593",732,"2",2024-02-06,"F22",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"594",733,"2",2024-02-06,"F17",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"595",734,"2",2024-02-06,"F24",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"596",735,"2",2024-02-06,"F30",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"597",736,"2",2024-02-06,"F55",0,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"598",737,"2",2024-02-06,"F57",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",18.2,26.7,30.6,31,0,0,0,0,23
+"599",738,"2",2024-02-07,"?",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"600",739,"2",2024-02-07,"F05",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"601",740,"2",2024-02-07,"F23",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"602",741,"2",2024-02-07,"F29",1,"Fox",2,0,NA,0,NA,0,NA,1,0.781944444444444,1,-2208999780,1,-2208990360,1,-2209048080,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,1,4,0,0,24
+"603",742,"2",2024-02-07,"F31",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"604",743,"2",2024-02-07,"F34",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"605",744,"2",2024-02-07,"F52",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"606",745,"2",2024-02-07,"F53",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.873611111111111,1,-2208993360,1,-2208991560,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,1,3,0,0,24
+"607",746,"2",2024-02-07,"F04",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"608",747,"2",2024-02-07,"F11",0,"Not taken",0,1,-2209005000,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,1,1,24
+"609",748,"2",2024-02-07,"F22",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"610",749,"2",2024-02-07,"F14",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"611",750,"2",2024-02-07,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"612",751,"2",2024-02-07,"F16",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"613",752,"2",2024-02-07,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"614",753,"2",2024-02-07,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"615",754,"2",2024-02-07,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"616",755,"2",2024-02-07,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"617",756,"2",2024-02-07,"F25",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"618",757,"2",2024-02-07,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"619",758,"2",2024-02-07,"F27",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"620",759,"2",2024-02-07,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"621",760,"2",2024-02-07,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"622",761,"2",2024-02-07,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"623",762,"2",2024-02-07,"F55",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"624",763,"2",2024-02-07,"F57",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"625",764,"2",2024-02-07,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"626",765,"2",2024-02-07,"F01",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"627",766,"2",2024-02-07,"F02",1,"Raven",2,0,NA,0,NA,0,NA,1,0.0444444444444444,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,"PE","Yes","Wednesday",9.2,23.6,0.2,39,1,1,0,0,24
+"628",767,"2",2024-02-07,"F03",1,"Raven",NA,1,-2209050960,0,NA,0,NA,1,0.00208333333333333,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",9.2,23.6,0.2,39,1,1,1,1,24
+"629",768,"2",2024-02-07,"F06",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"630",769,"2",2024-02-07,"F09",1,"Raven",2,0,NA,0,NA,0,NA,1,0.882638888888889,1,-2209060680,1,-2209057440,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",9.2,23.6,0.2,39,1,3,0,0,24
+"631",770,"2",2024-02-07,"F10",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"632",771,"2",2024-02-07,"F13",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"633",772,"2",2024-02-07,"F17",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"634",773,"2",2024-02-07,"F12",1,"Raven",NA,1,-2209008540,1,-2209046580,0,NA,1,0.88125,1,-2209058460,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",9.2,23.6,0.2,39,1,2,1,2,24
+"635",774,"2",2024-02-07,"F07",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"636",776,"2",2024-02-07,"F18",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,"PE","Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"637",777,"2",2024-02-07,"F28",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.965277777777778,1,-2209063980,1,-2209062480,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,1,3,0,0,24
+"638",778,"2",2024-02-07,"F30",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"639",779,"2",2024-02-07,"F32",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"640",780,"2",2024-02-07,"F35",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"641",781,"2",2024-02-07,"F56",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",9.2,23.6,0.2,39,0,0,0,0,24
+"642",782,"2",2024-02-08,"?",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"643",783,"2",2024-02-08,"F02",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"644",784,"2",2024-02-08,"F05",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"645",785,"2",2024-02-08,"F11",1,"Fox",1,0,NA,0,NA,0,NA,1,0.175694444444444,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Thursday",14.4,23.2,0,37,1,1,0,0,25
+"646",786,"2",2024-02-08,"F23",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"647",787,"2",2024-02-08,"F53",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.971527777777778,1,-2209059000,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Thursday",14.4,23.2,0,37,1,2,0,0,25
+"648",788,"2",2024-02-08,"F54",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,"PE","Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"649",789,"2",2024-02-08,"F10",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"650",790,"2",2024-02-08,"F22",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"651",791,"2",2024-02-08,"F13",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"652",792,"2",2024-02-08,"F14",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"653",793,"2",2024-02-08,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"654",794,"2",2024-02-08,"F16",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"655",795,"2",2024-02-08,"F17",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"656",796,"2",2024-02-08,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"657",797,"2",2024-02-08,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"658",798,"2",2024-02-08,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"659",799,"2",2024-02-08,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"660",800,"2",2024-02-08,"F25",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"661",801,"2",2024-02-08,"F26",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"662",802,"2",2024-02-08,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"663",803,"2",2024-02-08,"F48",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"664",804,"2",2024-02-08,"F57",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"665",805,"2",2024-02-08,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"666",806,"2",2024-02-08,"F04",1,"Raven",NA,1,-2209026720,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,"PE","Yes","Thursday",14.4,23.2,0,37,0,0,1,1,25
+"667",807,"2",2024-02-08,"F06",1,"Raven",0,1,-2209023060,1,-2209034640,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,1,2,25
+"668",808,"2",2024-02-08,"F08",1,"Raven",NA,1,-2209038000,0,NA,0,NA,1,0.855555555555556,1,-2209057620,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",14.4,23.2,0,37,1,2,1,1,25
+"669",809,"2",2024-02-08,"F09",1,"Raven",2,1,-2209014540,1,-2209048380,0,NA,1,0.925,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",14.4,23.2,0,37,1,1,1,2,25
+"670",810,"2",2024-02-08,"F12",1,"Raven",0,1,-2209009860,0,NA,0,NA,1,0.894444444444444,1,-2209061700,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",14.4,23.2,0,37,1,2,1,1,25
+"671",811,"2",2024-02-08,"F27",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"672",812,"2",2024-02-08,"F52",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"673",813,"2",2024-02-08,"F01",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"674",814,"2",2024-02-08,"F03",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"675",815,"2",2024-02-08,"F07",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"676",816,"2",2024-02-08,"F19",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"677",817,"2",2024-02-08,"F28",1,"Unknown",3,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"678",818,"2",2024-02-08,"F29",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"679",819,"2",2024-02-08,"F30",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"680",821,"2",2024-02-08,"F32",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"681",822,"2",2024-02-08,"F34",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"682",823,"2",2024-02-08,"F35",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"683",824,"2",2024-02-08,"F55",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"684",825,"2",2024-02-08,"F56",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Thursday",14.4,23.2,0,37,0,0,0,0,25
+"685",869,"3",2024-02-12,"F11",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.195833333333333,1,-2209053180,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,1,2,0,0,29
+"686",870,"3",2024-02-12,"F12",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"687",871,"3",2024-02-12,"F28",1,"Fox",2,0,NA,0,NA,0,NA,1,0.88125,1,-2208995520,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,1,2,0,0,29
+"688",872,"3",2024-02-12,"F29",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"689",873,"3",2024-02-12,"F34",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"690",874,"3",2024-02-12,"F35",1,"Fox",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"691",875,"3",2024-02-12,"F52",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.910416666666667,1,-2208990120,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,1,2,0,0,29
+"692",876,"3",2024-02-12,"F53",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"693",877,"3",2024-02-12,"F56",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"694",878,"3",2024-02-12,"F05",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"695",879,"3",2024-02-12,"F13",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"696",880,"3",2024-02-12,"F14",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"697",881,"3",2024-02-12,"F17",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"698",882,"3",2024-02-12,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"699",883,"3",2024-02-12,"F19",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"700",884,"3",2024-02-12,"F20",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"701",885,"3",2024-02-12,"F23",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"702",886,"3",2024-02-12,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"703",887,"3",2024-02-12,"F25",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"704",888,"3",2024-02-12,"F27",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"705",889,"3",2024-02-12,"F40",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"706",890,"3",2024-02-12,"F54",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"707",891,"3",2024-02-12,"F57",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"708",892,"3",2024-02-12,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Monday",11.2,30.5,0,33,0,0,0,0,29
+"709",893,"3",2024-02-12,"?",1,"Raven",0,1,-2209020240,1,-2209044540,0,NA,1,0.177777777777778,1,-2208997080,1,-2208990720,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",11.2,30.5,0,33,1,3,1,2,29
+"710",894,"3",2024-02-12,"F03",1,"Raven",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"711",895,"3",2024-02-12,"F04",1,"Raven",NA,1,-2209044780,0,NA,0,NA,1,0.884027777777778,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",11.2,30.5,0,33,1,1,1,1,29
+"712",896,"3",2024-02-12,"F06",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"713",897,"3",2024-02-12,"F55",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"714",899,"3",2024-02-12,"F01",1,"Unknown",0,0,NA,0,NA,0,NA,1,0.11875,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,1,1,0,0,29
+"715",900,"3",2024-02-12,"F02",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"716",901,"3",2024-02-12,"F07",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"717",902,"3",2024-02-12,"F08",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"718",903,"3",2024-02-12,"F09",1,"Unknown",3,0,NA,0,NA,0,NA,1,0.991666666666667,1,-2208989100,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,1,2,0,0,29
+"719",904,"3",2024-02-12,"F10",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"720",905,"3",2024-02-12,"F15",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"721",906,"3",2024-02-12,"F16",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"722",907,"3",2024-02-12,"F22",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"723",908,"3",2024-02-12,"F26",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"724",909,"3",2024-02-12,"F30",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"725",910,"3",2024-02-12,"F31",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"726",911,"3",2024-02-12,"F32",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Monday",11.2,30.5,0,33,0,0,0,0,29
+"727",912,"3",2024-02-13,"?",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.963888888888889,1,-2209056540,1,-2209052880,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,1,3,0,0,30
+"728",913,"3",2024-02-13,"F30",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"729",914,"3",2024-02-13,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"730",915,"3",2024-02-13,"F56",1,"Fox",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"731",916,"3",2024-02-13,"F01",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"732",917,"3",2024-02-13,"F05",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"733",918,"3",2024-02-13,"F06",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"734",919,"3",2024-02-13,"F14",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"735",920,"3",2024-02-13,"F15",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"736",928,"3",2024-02-13,"F16",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"737",929,"3",2024-02-13,"F17",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"738",930,"3",2024-02-13,"F22",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"739",931,"3",2024-02-13,"F23",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"740",932,"3",2024-02-13,"F24",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"741",933,"3",2024-02-13,"F25",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"742",934,"3",2024-02-13,"F31",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"743",935,"3",2024-02-13,"F34",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"744",936,"3",2024-02-13,"F40",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"745",937,"3",2024-02-13,"F54",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"746",938,"3",2024-02-13,"F57",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"747",939,"3",2024-02-13,"F04",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"748",940,"3",2024-02-13,"F18",1,"Raven",NA,1,-2209023960,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,1,1,30
+"749",941,"3",2024-02-13,"F20",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"750",942,"3",2024-02-13,"F21",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"751",943,"3",2024-02-13,"F27",1,"Raven",NA,1,-2209037580,1,-2209034580,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,1,2,30
+"752",944,"3",2024-02-13,"F58",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"753",946,"3",2024-02-13,"F02",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"754",947,"3",2024-02-13,"F03",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"755",948,"3",2024-02-13,"F26",1,"Unknown",NA,1,-2209029060,1,-2209024080,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,1,2,30
+"756",949,"3",2024-02-13,"F28",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.838194444444444,1,-2209000080,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,1,2,0,0,30
+"757",950,"3",2024-02-13,"F29",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"758",951,"3",2024-02-13,"F32",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"759",952,"3",2024-02-13,"F52",1,"Unknown",NA,0,NA,0,NA,0,NA,1,0.155555555555556,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,1,1,0,0,30
+"760",953,"3",2024-02-13,"F53",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"761",954,"3",2024-02-13,"F55",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Tuesday",14.3,31.1,0,57,0,0,0,0,30
+"762",955,"3",2024-02-14,"F05",1,"Fox",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"763",956,"3",2024-02-14,"F09",1,"Fox",1,0,NA,0,NA,0,NA,1,0.917361111111111,1,-2209052400,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,1,2,0,0,31
+"764",957,"3",2024-02-14,"F10",1,"Fox",1,0,NA,0,NA,0,NA,1,0.891666666666667,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,1,1,0,0,31
+"765",958,"3",2024-02-14,"F12",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.0381944444444444,1,-2209070640,1,-2209067640,1,-2209051260,0,NA,"Control",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,1,4,0,0,31
+"766",959,"3",2024-02-14,"F13",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"767",960,"3",2024-02-14,"F29",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.914583333333333,1,-2209071540,1,-2209058520,1,-2209037580,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,1,4,0,0,31
+"768",961,"3",2024-02-14,"F30",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"769",962,"3",2024-02-14,"F31",1,"Fox",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"770",963,"3",2024-02-14,"F34",1,"Fox",1,0,NA,0,NA,0,NA,1,0.373611111111111,0,NA,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,1,1,0,0,31
+"771",964,"3",2024-02-14,"F35",1,"Fox",NA,0,NA,0,NA,0,NA,1,0.972222222222222,0,NA,0,NA,0,NA,0,NA,"Control",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,1,1,0,0,31
+"772",965,"3",2024-02-14,"F54",1,"Fox",1,0,NA,0,NA,0,NA,1,0.0569444444444444,1,-2209067460,0,NA,0,NA,0,NA,"Treatment",1,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,1,2,0,0,31
+"773",966,"3",2024-02-14,"F14",0,"Not taken",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"774",967,"3",2024-02-14,"F15",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"775",968,"3",2024-02-14,"F16",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"776",969,"3",2024-02-14,"F17",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"777",970,"3",2024-02-14,"F18",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"778",971,"3",2024-02-14,"F21",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"779",972,"3",2024-02-14,"F24",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"780",973,"3",2024-02-14,"F25",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"781",974,"3",2024-02-14,"F40",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"782",975,"3",2024-02-14,"F58",0,"Not taken",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"No","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"783",976,"3",2024-02-14,"?",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.965277777777778,1,-2208989100,1,-2209062720,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,1,3,0,0,31
+"784",977,"3",2024-02-14,"F01",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"785",978,"3",2024-02-14,"F03",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"786",979,"3",2024-02-14,"F04",1,"Raven",NA,0,NA,0,NA,0,NA,1,0.0423611111111111,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,1,1,0,0,31
+"787",980,"3",2024-02-14,"F20",1,"Raven",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"788",981,"3",2024-02-14,"F22",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"789",982,"3",2024-02-14,"F26",1,"Raven",0,1,-2209016820,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,1,1,31
+"790",983,"3",2024-02-14,"F27",1,"Raven",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"791",984,"3",2024-02-14,"F57",1,"Raven",NA,1,-2209018680,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,1,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,1,1,31
+"792",985,"3",2024-02-14,"F02",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"793",986,"3",2024-02-14,"F06",1,"Unknown",0,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"794",987,"3",2024-02-14,"F07",1,"Unknown",2,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"795",988,"3",2024-02-14,"F08",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"796",989,"3",2024-02-14,"F11",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"797",990,"3",2024-02-14,"F19",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"798",991,"3",2024-02-14,"F23",1,"Unknown",1,0,NA,0,NA,0,NA,0,0.102083333333333,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"799",992,"3",2024-02-14,"F28",1,"Unknown",1,0,NA,0,NA,0,NA,0,0.772222222222222,1,-2209000320,1,-2209056780,1,-2209039920,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,1,4,0,0,31
+"800",993,"3",2024-02-14,"F32",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"801",994,"3",2024-02-14,"F52",1,"Unknown",3,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Treatment",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"802",995,"3",2024-02-14,"F53",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"803",996,"3",2024-02-14,"F55",1,"Unknown",NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31
+"804",997,"3",2024-02-14,"F56",1,"Unknown",1,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,0,NA,"Control",NA,NA,NA,"Yes","Wednesday",17.5,26.8,10,41,0,0,0,0,31

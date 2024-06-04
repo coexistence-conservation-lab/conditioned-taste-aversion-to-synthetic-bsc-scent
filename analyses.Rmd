@@ -1,18 +1,19 @@
 ---
 title: "Inducing conditioned taste aversion in red foxes to bush stone-curlew eggs using synthetic scent"
 author: "Ellie Lambden, Belinda Wilson"
-date: "Mar 1, 2024"
+date: "May 6, 2024"
 output:
   html_document:
     toc: true
     number_sections: true
-    toc_depth: 4
+    toc_depth: 3
     toc_float:
-      collapsed: false
-    theme: united
-    highlight: tango
-editor_options:
+      collapsed: true
+    theme: cerulean
+    highlight: pygments
+editor_options: 
   chunk_output_type: console
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'tutorial.html')) })
 ---
 
 ```{r setup, include=FALSE}
@@ -29,7 +30,7 @@ Major questions:
 
 # Data preparation
 
-Firstly, we're going to install and load our packages. We will use the pacman [Package Management Tool](https://cran.r-project.org/web/packages/pacman/index.html) which allows us to install and load subsequent packages in a condensed and efficient way.
+We used the pacman [Package Management Tool](https://cran.r-project.org/web/packages/pacman/index.html) to install and load packages in a condensed and efficient way.
 
 ```{r, eval=FALSE}
 # Install pacman package
@@ -38,80 +39,37 @@ install.packages('pacman')
 
 ```{r, results='hide', warning=FALSE, message=FALSE}
 # Install and load required packages
-pacman::p_load(dplyr, ggmap, ggspatial, ggplot2, ggpubr, janitor, lme4, lmerTest, lwgeom, MuMIn, readxl, sf, sp, tidyr, tidyverse, viridis)
-```
+pacman::p_load(beepr, dplyr, ggmap, ggspatial, ggplot2, ggpubr, janitor, lme4, lmerTest, lwgeom, MuMIn, ncdf4, raster, readxl, sf, sp, tidyr, tidyverse, viridis)
 
-Secondly, we'll read in our data and explore it.
-
-```{r}
-# Read in data
-data <- read_excel(path="data.xlsx", sheet="data") %>%
-  clean_names()
-```
-
-Let's view the data.
-
-```{r, echo=FALSE, eval=FALSE}
-#View(data)
-
-# Look at first 6 rows of the data
-head(data)
-
-# Look at last 6 rows of the data
-tail(data)
-
-# Look at the structure of the data
-str(data)
-
-# Look at the column names
-names(data)
-
-# Look at the values of a single column
-head(data$bait_take)
-
-# Look at unique values for a single column
-unique(data$treatment)
-unique(data$bait_take)
-
-# Find out how many rows there are in the data
-nrow(data)
+# Assign beepr sound (options are ping, coin, fanfare, complete, treasure, ready, shotgun, mario, wilhelm, facebook, sword)
+sound <- "coin"
 ```
 
 ## Bait take
 
-Now, we'll wrangle some of our data to get it ready for analyses and plotting.
+Here we prepare our bait take data to get it ready for analyses and plotting.
 
 ```{r}
-data <- read_excel(path="data.xlsx", sheet="data") %>%
-  clean_names() %>%
-  mutate(date = as.Date(date)) %>%
-  mutate(bait_take = as.numeric(bait_take)) %>%
-  mutate(phase = as.factor(phase)) %>%
-  drop_na(bait_take) %>%
-  mutate(bait_yes = ifelse(bait_take == 1, "Yes", "No"))
+# Read in data
+data <- read_excel(path="input/raw data.xlsx", sheet="data") %>% 
+  clean_names() %>% 
+  mutate(date = as.Date(date)) %>% 
+  mutate(bait_take = as.numeric(bait_take)) %>% 
+  mutate(phase = as.factor(phase)) %>% 
+  drop_na(bait_take) %>% 
+  mutate(bait_yes = ifelse(bait_take == 1, "Yes", "No"), 
+         prints_count = as.numeric(prints_count)) %>%
+  suppressWarnings() 
 ```
 
-We exclude Friday's data from the dataset here. The cameras were inconsistant so, if an egg was missing when baits were checked on Monday and the camera had failed, we would not be able to say with certainty that it had been taken within 24 hours of deployment. This means the data from that site would be excluded for that day. If an egg was not taken, we would still be able to use that data. As a result, this skewed our results towards egg rejection. To be consistent, it is better to reject all of Fridays data.
+We exclude Friday's data from the dataset here. The cameras were inconsistent so, if an egg was missing when baits were checked on Monday and the camera had failed, we would not be able to say with certainty that it had been taken within 24 hours of deployment. This means the data from that site would be excluded for that day. If an egg was not taken, we would still be able to use that data. As a result, this skewed our results towards egg rejection. To be consistent, it is better to reject all of Fridays data.
 
 ```{r}
 # Create a column for day of the week from the date variable
-# Generate a sequence of dates
-dates <- seq(as.Date("2024-01-01"), as.Date("2024-12-31"), by = "day")
-
-# Extract days of the week
-days_of_week <- weekdays(dates)
-
-# Combine with original dataset
-df <- data.frame(Date = dates, DayOfWeek = days_of_week)
-
-# Print the resulting dataframe
-print(df)
-
-# Remove Fridays from the dataframe
-df_filtered <- subset(df, DayOfWeek != "Friday")
-
-# Print the resulting dataframe
-print(df_filtered)
+data <- data %>%
+  mutate(day_of_week = weekdays(date)) %>%
+# Subset to any day except Fridays
+  subset(day_of_week != "Friday")
 ```
 
 ## Weather
@@ -119,7 +77,8 @@ print(df_filtered)
 The weather data were acquired from the [Australian Bureau of Meteorology weather station 70351](http://www.bom.gov.au/climate/dwo/202402/html/IDCJDW2801.202402.shtml).
 
 ```{r}
-weather <- read_excel(path="data.xlsx", sheet="weather") %>%
+# Read in weather data
+weather <- read_excel(path="input/raw data.xlsx", sheet="weather") %>%
   clean_names() %>%
   mutate(date = as.Date(date))
 
@@ -127,26 +86,29 @@ weather <- read_excel(path="data.xlsx", sheet="weather") %>%
 data <- left_join(data, weather, by=c("date"))
 ```
 
-## Species
+## Visits
 
 ```{r}
 # Subset to actual instances of bait take by a vertebrate
 data <- data %>%
   subset(species != "Lizard") %>%
+  # Change columns to numeric
+  mutate_at(7:22, as.numeric) %>%
   filter(!is.na(fox_visit_1_pa),
          !is.na(fox_visit_2_pa),
          !is.na(fox_visit_3_pa), 
          !is.na(fox_visit_4_pa), 
          !is.na(fox_visit_5_pa), 
+         
          !is.na(raven_visit_1_pa), 
          !is.na(raven_visit_2_pa), 
          !is.na(raven_visit_3_pa)) %>%
   
-  mutate(fox_visit_pa = ifelse(fox_visit_1_pa !=0, "Yes", 
-                        ifelse(fox_visit_2_pa !=0, "Yes",
-                        ifelse(fox_visit_3_pa !=0, "Yes", 
-                        ifelse(fox_visit_4_pa !=0, "Yes", 
-                        ifelse(fox_visit_5_pa !=0, "Yes", "No")))))) %>%
+  mutate(fox_visit_pa = ifelse(fox_visit_1_pa !=0, 1, 
+                        ifelse(fox_visit_2_pa !=0, 1,
+                        ifelse(fox_visit_3_pa !=0, 1, 
+                        ifelse(fox_visit_4_pa !=0, 1, 
+                        ifelse(fox_visit_5_pa !=0, 1, 0)))))) %>%
   
   mutate(fox_visit_n = ifelse(fox_visit_5_pa !=0, 5, 
                        ifelse(fox_visit_4_pa !=0, 4, 
@@ -154,92 +116,228 @@ data <- data %>%
                        ifelse(fox_visit_2_pa !=0, 2, 
                        ifelse(fox_visit_1_pa !=0, 1, 0)))))) %>%
 
-  mutate(raven_visit_pa = ifelse(raven_visit_1_pa !=0, "Yes", 
-                          ifelse(raven_visit_2_pa !=0, "Yes",
-                          ifelse(raven_visit_3_pa !=0, "Yes", "No")))) %>%
+  mutate(raven_visit_pa = ifelse(raven_visit_1_pa !=0, 1, 
+                          ifelse(raven_visit_2_pa !=0, 1,
+                          ifelse(raven_visit_3_pa !=0, 1, 0)))) %>%
   
   mutate(raven_visit_n = ifelse(raven_visit_3_pa !=0, 3, 
                          ifelse(raven_visit_2_pa !=0, 2,
                          ifelse(raven_visit_1_pa !=0, 1, 0))))
 
+# Read in processed data
+data <- data %>%
+  clean_names() %>%
+  mutate(date = as.Date(date)) %>%
+  # Create study day variable
+  mutate(study_day = yday(date)-14)
+
 # Save the processed data
-write.csv(data, "data processed.csv")
+write.csv(data, "output/data processed.csv")
 ```
 
-# Analyses
+## GIS
+
+Here we read in and reproject polylines representing the anthropogenic boundary (urban and roads) and natural boundary (river corridor) at the Ginninderry Conservation Corridor (GCC) and calculate the distance from each bait station to these boundaries.
+
+What we need to do for each layer is check its inherent Coordinate Reference System (CRS, using `st_transform()` to find the last 4-digit number of its output), remind the layer of that number (using `st_set_crs()`), and then reproject it to the CRS we wish to work with (using `st_transform("EPSG:4326")`). 
+
+### Bait station points
+
+```{r}
+# Read in bait station points
+stations <- st_read("input/bait_stations_egg_cta.shp") %>%
+  as.data.frame() %>%
+  fortify() %>%
+  clean_names()
+
+# Transform to Spatial Points Dataframe
+stations_spdf <- SpatialPointsDataFrame( 
+  data.frame(stations$long, stations$lat), 
+  stations, proj4string=CRS("EPSG:4326")) %>% 
+  st_as_sf()
+```
+
+### Anthropogenic boundary
+
+```{r}
+# Read in the layer
+gcc_anth <- st_read("input/anthropogenic_boundary.shp")
+
+# Remind the layer of its CRS then reproject to our desired CRS
+gcc_anth <- gcc_anth %>%
+  # Set projection using sf
+  st_set_crs(st_crs(gcc_anth)) %>%
+  st_transform("EPSG:4326")
+
+gcc_anth_geo <- st_geometry(obj = gcc_anth) %>%
+  st_cast(to = 'LINESTRING')
+
+# Combine the linestrings into a single geometry
+gcc_anth_com <- st_union(gcc_anth_geo)
+
+# Calculate distance of bait stations to nearest edge of polygon
+dist_anth <- gcc_anth_com %>%
+  st_distance(y=stations_spdf) %>%
+  as.data.frame() %>%
+  # Transpose the df from columns to rows
+  t()
+
+# Join distances to bait stations df 
+stations_spdf <- cbind(stations_spdf, dist_anth)
+```
+
+### Natural boundary
+
+```{r}
+# Read in the layer
+gcc_nat <- st_read("input/natural_boundary.shp")
+
+# Remind the layer of its CRS then reproject to our desired CRS
+gcc_nat <- gcc_nat %>%
+  # Set projection using sf
+  st_set_crs(st_crs(gcc_nat)) %>%
+  st_transform("EPSG:4326")
+
+# Calculate distance of bait stations to nearest edge of polygon
+dist_nat <- st_geometry(obj = gcc_nat) %>%
+  st_cast(to = 'MULTILINESTRING') %>%
+  st_distance(y=stations_spdf) %>%
+  as.data.frame() %>%
+  # Transpose the df from columns to rows
+  t()
+
+# Join distances to bait stations df 
+stations_spdf <- cbind(stations_spdf, dist_nat)
+```
+
+Here we combine the GIS dataframe with the previously prepared data.
+
+```{r}
+# Rename name to site
+stations <- stations_spdf %>%
+  dplyr::rename(site = name)
+
+# Join response df to spatial df
+data_sp <- left_join(data, stations, by=c("site", "treatment")) %>%
+  filter(!is.na(bait_take))
+
+# Subset to only variables in the subsequent models and plots
+data_mod <- data_sp %>%
+  dplyr::select(treatment, site, date, study_day, 
+                bait_take, fox_visit_n, raven_visit_n, prints_count, 
+                maximum_temperature_c, minimum_temperature_c, 
+                rainfall_mm, speed_of_maximum_wind_gust_km_h, 
+                dist_anth, dist_nat, elevation) %>%
+  na.omit()
+```
+
+# Models
+
+Here we model the relationship between our response variables (i.e., `bait_take`, `fox_vists`,  `raven_visit_n`, and `prints_count`) and:
+
+  - Treatment (treatment or control, `treatment`)
+  - Study day (1-23, `study_day`)
+  - Maximum temperature (`maximum_temperature_c`)
+  - Minimum temperature (`minimum_temperature_c`)
+  - Rainfall (mm, `rainfall_mm`)
+  - Maximum wind gust (km/hr, ``)
+  - Distance to anthropogenic boundary (urban area and roads) to the east (`gcc_anth`) 
+  - Distance to natural boundary (river corridor) to the west (`gcc_nat`)
+  - Elevation (m, `elevation`)
+
+
+## Responses
+
+Here we pose the methodological question, are our response variables (i.e., `bait_take`, `fox_vists`,  `raven_visit_n`, and `prints_count`) are affected by each other.
+
+```{r}
+# Fit a GLM
+summary(glm(bait_take ~ fox_visit_n + raven_visit_n + 
+              prints_count, family=gaussian, data=data_mod))
+```
+
+## Correlation tests
+
+Before running GLMs with our continuous predictors, we generate a correlation matrix (values are R-squared) to check whether any are significantly correlated with each other (i.e., R^2 above 0.7 is considered significant). 
+
+```{r}
+# Subset data for correlation test
+data_corr <- data_mod %>%
+  dplyr::select(maximum_temperature_c, minimum_temperature_c, 
+                rainfall_mm, speed_of_maximum_wind_gust_km_h, 
+                dist_nat, dist_anth, elevation)
+
+# Generate correlation matrix
+cor(data_corr)
+```
+
+Because `dist_nat` and `elevation` are significantly correlated, we drop `elevation` from our models.
 
 ## Bait take
 
-### Plots
+```{r}
+# Experimental and climatic model
+summary(glm(bait_take ~ treatment + study_day + rainfall_mm + 
+             maximum_temperature_c + minimum_temperature_c + 
+             speed_of_maximum_wind_gust_km_h, 
+           family=gaussian, data=data_mod))
 
-#### All species
+# Geographic model
+summary(glm(bait_take ~ dist_anth + dist_nat, 
+            family=gaussian, data=data_mod))
 
-Bait take by treatment
+# Competing model
+mod <- glm(bait_take ~ treatment + dist_anth + dist_nat, 
+            data=data_mod, na.action = "na.fail")
+
+# Display summary statistics
+summary(mod)
+
+# Perform model selection using dredge() with AICc
+dredge(mod, rank = "AICc") %>%
+  filter(delta <2)
+```
+
+Bait take was significantly influenced by treatment, distance to anthropogenic boundary, and distance to natural boundary.
+
+## Fox visits
 
 ```{r}
-# Read in processed data
-data <- read.csv("data processed.csv") %>%
-  clean_names() %>%
-  mutate(date = as.Date(date))
+# Experimental and climatic model
+summary(glm(fox_visit_n ~ treatment + study_day + rainfall_mm + 
+              maximum_temperature_c + minimum_temperature_c + 
+              speed_of_maximum_wind_gust_km_h, 
+            family=gaussian, data=data_mod))
 
-# Plot by treatment type
-bait_treat <- ggplot(data, aes(x = as.Date(date), 
-                                           y = bait_take, 
-                                           col=treatment, 
-                                           fill=treatment)) +
-  geom_smooth() +
-  theme_minimal() + 
-  theme(plot.title = element_text(hjust=0.5)) +
-  ggtitle("All species") +
-  xlab("Date") + 
-  ylab("Bait take") + 
-  labs(fill="Treatment", col="Treatment") +
+# Geographic model
+summary(glm(fox_visit_n ~ dist_anth + dist_nat, 
+            family=gaussian, data=data_mod))
 
-# Display the plot
-#print(bait_treat)
-
-# Model for bait take by treatment
-#summary(glm(bait_take ~ treatment, data=data))
+# Prints model
+summary(glm(fox_visit_n ~ prints_count, 
+            family=gaussian, data=data_mod))
 ```
 
-```{r, eval=FALSE, include=FALSE}
-# Save the plot as a jpeg
-ggsave("figures/bait_treat.jpeg", height=1500, width=2000, unit="px")
-```
+Fox visits was significantly influenced by distance to natural boundary.
 
-Bait take by treatment and phase
+## Raven visits
 
 ```{r}
-# Read in processed data
-data <- read.csv("data processed.csv") %>%
-  clean_names() %>%
-  mutate(date = as.Date(date))
+# Experimental and climatic model
+summary(glm(raven_visit_n ~ treatment + study_day + rainfall_mm + 
+              maximum_temperature_c + minimum_temperature_c + 
+              speed_of_maximum_wind_gust_km_h, 
+            family=gaussian, data=data_mod))
 
-# Plot by treatment type
-bait_treat_phase <- ggplot(data, aes(x = as.Date(date), 
-                                           y = bait_take, 
-                                           col=treatment, 
-                                           fill=treatment)) +
-  geom_smooth() +
-  theme_minimal() + 
-  theme(plot.title = element_text(hjust=0.5)) +
-  ggtitle("All species") +
-  facet_wrap(~phase, scales="free") +
-  xlab("Date") + 
-  ylab("Bait take") + 
-  labs(fill="Treatment", col="Treatment")
-
-# Display the plot
-print(bait_treat_phase)
-
-# Model for bait take by treatment and phase
-summary(glm(bait_take ~ treatment + phase, data=data))
+# Geographic model
+summary(lm(raven_visit_n ~ dist_anth + dist_nat, data=data_mod))
 ```
 
-```{r, eval=FALSE, include=FALSE}
-# Save the plot as a jpeg
-ggsave("figures/bait_treat_phase.jpeg", height=1500, width=2000, unit="px")
-```
+Raven visits was not significantly influenced by any of our predictors.
+
+# Plots
+
+## Bait take
 
 Percentage bait taken by each species by phase
 
@@ -252,17 +350,19 @@ taken <- data %>%
   summarise(perc = n() / nrow(data) * 100)
 
 # Plot by treatment type
-taken_species_phase_hist <- ggplot(data=taken, 
-                                        aes(x = species, y = perc, 
-                                            col=treatment, fill=treatment)) +
+taken_species_phase_hist <- ggplot(data=taken, aes(x = species, 
+                                                   y = perc, 
+                                                   col=treatment,
+                                                   fill=treatment)) +
   geom_col() +
   theme_minimal() + 
   theme(plot.title = element_text(hjust=0.5)) +
-  facet_wrap(~phase) +
   ggtitle("All species") +
   xlab("Species") + 
   ylab("Percentage of taken baits (%)") + 
-  labs(fill="Treatment", col="Treatment")
+  labs(fill="Treatment", col="Treatment") +
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1)) + 
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1))
 
 # Display the plot
 print(taken_species_phase_hist)
@@ -270,39 +370,118 @@ print(taken_species_phase_hist)
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave("figures/taken_species_phase_hist.jpeg", height=1500, width=2000, unit="px")
+ggsave("output/taken_species_phase_hist.jpeg", 
+       height=1500, width=2000, unit="px")
 ```
 
-Plot bait take by rainfall
-
 ```{r}
-# Plot by rainfall type
-bait_rain <- ggplot(data, aes(x = rainfall_mm, 
-                                          y = bait_take, 
-                                          col=treatment, 
-                                          fill=treatment)) +
-  geom_smooth() + 
+# Plot bait take by treatment across time
+bait_treat_day_all_sp <- ggplot(data_mod, aes(x = study_day, 
+                                       y = bait_take, 
+                                       col=treatment, 
+                                       fill=treatment)) +
+  geom_smooth() +
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust=0.5), 
+        legend.position="right") +
+  xlab("Study Day") + 
+  ylab("Bait take") + 
+  labs(fill="Treatment", col="Treatment") +
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1), name=NULL) +
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1), name=NULL) 
+
+# Plot bait take by treatment
+bait_treat <- ggplot(data_mod, aes(x = treatment,
+                                   y = bait_take, 
+                                   col=treatment, 
+                                   fill=treatment)) +
+  geom_col() +
   theme_minimal() + 
   theme(plot.title = element_text(hjust=0.5)) +
-  ggtitle("All species") +
-  xlab("Rainfall") + 
+  ggtitle("none") +
+  xlab("Treatment") + 
   ylab("Bait take") + 
-  labs(fill="Treatment", col="Treatment")
-  
-# Display the plot
-print(bait_rain)
+  labs(fill="Treatment", col="Treatment") +
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1)) +
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1)) 
 
+# Display plot
+print(bait_treat_day_all_sp)
 
-# Model for bait take by treatment and rainfall
-summary(glm(bait_take ~ treatment + rainfall_mm, data=data))
+ggsave("output/bait_treat_day_all_sp.jpeg", 
+       height=1000, width=2000, unit="px")
 ```
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave("figures/bait_rain.jpeg", height=1500, width=2000, unit="px")
+ggsave(plot=bait_treat_both, "output/bait take by treatment.jpeg", 
+       height=50, width=100, unit="mm")
 ```
 
-#### Foxes
+
+### Influences
+```{r}
+# Bait take plot
+bait_take_prints <- ggplot(data_mod, aes(x = prints_count, 
+                                       y = bait_take, 
+                                       col=treatment, 
+                                       fill=treatment)) +
+  geom_smooth() +
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust=0.5), 
+        legend.position="none") +
+  ggtitle("Bait-take by prints") +
+  xlab("Prints") + 
+  ylab("Bait take") + 
+  labs(fill="Treatment", col="Treatment") +
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1)) +
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1)) 
+
+# Display the plot
+print(bait_take_prints)
+
+# Fox visits plot
+bait_take_fox_visits <- ggplot(data_mod, aes(x = fox_visit_n, 
+                                             y = bait_take, 
+                                             col = treatment, 
+                                             fill = treatment)) +
+  geom_smooth(method = "lm", se = TRUE) +
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        legend.position = "none") +
+  ggtitle("Bait-take by Fox Visits") +
+  xlab("Fox Visits") + 
+  ylab("Bait Take") + 
+  labs(fill = "Treatment", col = "Treatment") +
+  scale_colour_manual(values = viridis(2, begin = 0.8, end = 0.1)) +
+  scale_fill_manual(values = viridis(2, begin = 0.8, end = 0.1)) +
+  facet_wrap(~ treatment)
+
+# Display plot
+print(bait_take_fox_visits)
+
+# Raven visits plot
+bait_take_raven_visits <- ggplot(data_mod, aes(x = raven_visit_n, 
+                                               y = bait_take, 
+                                               col = treatment, 
+                                               fill = treatment)) +
+  geom_smooth(method = "lm", se = TRUE) +
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust = 0.5), 
+        legend.position = "none") +
+  ggtitle("Bait-take by Raven Visits") +
+  xlab("Raven Visits") + 
+  ylab("Bait Take") + 
+  labs(fill = "Treatment", col = "Treatment") +
+  scale_colour_manual(values = viridis(2, begin = 0.8, end = 0.1)) +
+  scale_fill_manual(values = viridis(2, begin = 0.8, end = 0.1)) +
+  facet_wrap(~ treatment)
+
+# Display plot
+print(bait_take_raven_visits)
+```
+
+## Fox visits
 
 Percentage fox visits by treatment and phase
 
@@ -310,32 +489,31 @@ Percentage fox visits by treatment and phase
 # Subset to only potential foxes
 fox_stats <- data %>%
   subset(species == "Fox") %>%
-  group_by(treatment, phase) %>%
+  group_by(treatment) %>%
   summarise(perc = n() / nrow(data) * 100)
   
 # Plot by treatment type
-visits_fox_histogram <- ggplot(data=fox_stats, 
-                              aes(y = perc, x = treatment, 
-                                  col=treatment, fill=treatment)) +
+fox_vis_hist <- ggplot(data=fox_stats, 
+                       aes(y = perc, x = treatment, 
+                           col=treatment, fill=treatment)) +
   geom_col() +
   theme_minimal() + 
   theme(plot.title = element_text(hjust=0.5)) +
-  facet_wrap(~phase) +
   ggtitle("Potential fox visits (including unknowns)") +
   xlab("Species") + 
   ylab("Percentage of fox visits (%)") + 
-  labs(fill="Treatment", col="Treatment")
+  labs(fill="Treatment", col="Treatment") +
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1)) +
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1)) 
 
 # Display the plot
-print(visits_fox_histogram)
-
-# Model for fox visits by treatment and phase
-summary(glm(fox_visit_pa ~ treatment + phase, data=data))
+print(fox_vis_hist)
 ```
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave("figures/visits_fox_histogram.jpeg", height=1500, width=3000, unit="px")
+ggsave(plot=fox_vis_hist, "output/fox visits histogram.jpeg", 
+       height=150, width=300, unit="mm")
 ```
 
 ```{r}
@@ -345,18 +523,19 @@ foxes_only <- data %>%
   subset(species != "Unknown")
   
 # Plot by treatment type
-bait_treat_phase <- ggplot(data=foxes_only, aes(x = as.Date(date), 
-                                           y = bait_take, 
-                                           col=treatment, 
-                                           fill=treatment)) +
+bait_treat_phase <- ggplot(data=foxes_only, aes(x=date, 
+                                                y=bait_take, 
+                                                col=treatment, 
+                                                fill=treatment)) +
   geom_smooth() +
   theme_minimal() + 
   theme(plot.title = element_text(hjust=0.5)) +
   ggtitle("Foxes vs no take (excluding unknowns)") +
-  facet_wrap(~phase, scales="free") +
   xlab("Date") + 
   ylab("Bait take") + 
-  labs(fill="Treatment", col="Treatment")
+  labs(fill="Treatment", col="Treatment") +
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1)) +
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1)) 
 
 # Display the plot
 print(bait_treat_phase)
@@ -364,15 +543,82 @@ print(bait_treat_phase)
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave("figures/bait_foxes_treat_phase.jpeg", height=1500, width=3000, unit="px")
+ggsave("output/fox take by treatment.jpeg", 
+       height=1500, width=3000, unit="px")
 ```
 
-#### Ravens
+Prints as a representation of fox visits 
+
+```{r}
+# Plot by treatment type
+visit_print <- ggplot(data, aes(x = prints_count, 
+                                y = fox_visit_n)) +
+  geom_smooth() +
+  theme_minimal() + 
+  theme(plot.title = element_text(hjust=0.5)) +
+  xlab("Print Count") + 
+  ylab("Fox visits") +
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1)) +
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1)) 
+
+# Display the plot
+print(visit_print)
+```
+
+```{r, eval=FALSE, include=FALSE}
+# Save the plot as a jpeg
+ggsave("output/fox visits by print count.jpeg", 
+       height=1000, width=2000, unit="px")
+```
+
+```{r}
+# Plot the distances against bait take
+dist_anth_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_anth, y=bait_take, 
+                  col=treatment, fill=treatment)) + 
+  xlab("Distance to nearest part of anthropogenic boundary (m)") + 
+  ylab("Bait take (proportion)") + 
+  theme_minimal() + 
+  theme(legend.position="none") + 
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1)) +
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1)) +
+  ylim(0,1)
+
+dist_nat_plot <- ggplot(data = data_mod) +
+  geom_smooth(aes(x=dist_nat, y=bait_take, 
+                  col=treatment, fill=treatment)) + 
+  xlab("Distance to nearest part of natural boundary (m)") + 
+  ylab("Bait take (proportion)") + 
+  theme_minimal() +
+  scale_colour_manual(values=viridis(2, begin=0.8, end=0.1), name=NULL) +
+  scale_fill_manual(values=viridis(2, begin=0.8, end=0.1), name=NULL) +
+  ylim(0,1)
+
+dist_plots <- ggarrange(dist_anth_plot, dist_nat_plot, ncol=2, labels=c("(a)", "(b)"), label.x=0.05, label.y=0.9,font.label=list(size=10))
+
+# Display the plot
+print(dist_plots)
+```
+
+```{r, eval=FALSE, include=FALSE}
+# Save the plot as a jpeg
+ggsave(plot=dist_plots, 
+       "output/bait take by treatment and distances.jpeg", 
+       height=3, width=9, dpi=300)
+```
+
+```{r, eval=FALSE, include=FALSE}
+# Save the plot as a jpeg
+ggsave(plot=mod_map, "output/fox visits map.jpeg", 
+       height=4, width=6, dpi=300)
+```
+
+## Raven visits
 
 Percentage raven visits by treatment and phase
 
 ```{r}
-# Subset to only potential foxes
+# Subset to only potential ravens
 raven_stats <- data %>%
   subset(species == "Raven") %>%
   group_by(treatment, phase) %>%
@@ -389,7 +635,11 @@ visits_raven_hist <- ggplot(data=raven_stats,
   ggtitle("Potential raven visits (including unknowns)") +
   xlab("Species") + 
   ylab("Percentage of raven visits (%)") + 
-  labs(fill="Treatment", col="Treatment")
+  labs(fill="Treatment", col="Treatment") +
+  scale_colour_manual(values=viridis(2, begin=0.8, 
+                                    end=0.1), name=NULL) +    
+  scale_fill_manual(values=viridis(2, begin=0.8, 
+                                   end=0.1), name=NULL)
 
 # Display the plot
 print(visits_raven_hist)
@@ -397,28 +647,33 @@ print(visits_raven_hist)
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave("figures/visits_raven_hist.jpeg", height=1500, width=3000, unit="px")
+ggsave("output/visits_raven_hist.jpeg", 
+       height=1500, width=3000, unit="px")
 ```
 
 ```{r}
-# Subset to only potential foxes
+# Subset to only potential ravens
 ravens_only <- data %>%
   subset(species != "Fox") %>%
   subset(species != "Unknown")
   
 # Plot by treatment type
-bait_raven_treat_phase <- ggplot(data=ravens_only, aes(x = as.Date(date), 
-                                           y = bait_take, 
-                                           col=treatment, 
-                                           fill=treatment)) +
+bait_raven_treat_phase <- ggplot(data=ravens_only, 
+                                 aes(x = as.Date(date), 
+                                     y = bait_take, 
+                                     col=treatment, 
+                                     fill=treatment)) +
   geom_smooth() +
   theme_minimal() + 
   theme(plot.title = element_text(hjust=0.5)) +
   ggtitle("Ravens vs no take (excluding unknowns)") +
-  facet_wrap(~phase, scales="free") +
   xlab("Date") + 
   ylab("Bait take") + 
-  labs(fill="Treatment", col="Treatment")
+  labs(fill="Treatment", col="Treatment") +
+  scale_colour_manual(values=viridis(2, begin=0.8, 
+                                     end=0.1), name=NULL) +    
+  scale_fill_manual(values=viridis(2, begin=0.8, 
+                                   end=0.1), name=NULL)
 
 # Display the plot
 print(bait_raven_treat_phase)
@@ -426,77 +681,76 @@ print(bait_raven_treat_phase)
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave("figures/bait_ravens_treat_phase.jpeg", height=1500, width=3000, unit="px")
+ggsave("output/bait_ravens_treat_phase.jpeg", 
+       height=1500, width=3000, unit="px")
 ```
 
-Bait take by fox visits 
-
 ```{r}
-# Plot bait take by species visits
-bait_visits <- ggplot(data, mapping=aes(x = as.Date(date))) +
-  geom_smooth(data, mapping=aes(y = as.numeric(bait_take)), 
-              color = "red", fill = "red") +
-  geom_smooth(data, mapping=aes(y = as.numeric(fox_visit_n)), 
-              color = "darkorange", fill = "darkorange")  +
-  geom_smooth(data, mapping=aes(y = as.numeric(raven_visit_n)), 
-              color = "black", fill = "black")  +
-  theme_minimal() + 
-  facet_wrap(~treatment) +
-  scale_y_continuous(name = "Bait take (%)", limits = c(0, 1), 
-                     sec.axis = sec_axis(~., name = "Fox (orange) and raven (black) visits", 
-                                         breaks = c(0, 1))) +
-  xlab("Date")
-
-# Display the plot
-print(bait_visits)
+# Model for raven visits by study day
+summary(glm(raven_visit_n ~ treatment + study_day, 
+            data=data))
 ```
 
 ```{r, eval=FALSE, include=FALSE}
 # Save the plot as a jpeg
-ggsave("figures/bait_visits.jpeg", height=1500, width=2000, unit="px")
+ggsave(plot=mod_map, "output/raven visits map.jpeg", 
+       height=4, width=6, dpi=300)
 ```
 
-### Models
-
-#### All species
-
-Build generalised linear models for our research questions.
+## Bait take by visits
 
 ```{r}
-# Model for bait take by treatment
-summary(glm(bait_take ~ treatment, data=data))
+# Plot bait take by species visits
 
-# Model for bait take by treatment and rainfall
-summary(glm(bait_take ~ treatment + rainfall_mm, data=data))
+bait_visits <- ggplot(data, mapping=aes(x = study_day)) +
+  geom_smooth(data, mapping=aes(y = as.numeric(bait_take), 
+                                color = "Bait Take", 
+                                fill = "Bait Take")) +
+  geom_smooth(data, mapping=aes(y = as.numeric(fox_visit_n), 
+                                color = "Fox Visits", 
+                                fill = "Fox Visits"))  +
+  geom_smooth(data, mapping=aes(y = as.numeric(raven_visit_n), 
+                                color = "Raven Visits", 
+                                fill = "Raven Visits"))  +
+  scale_color_manual(values = c("Bait Take" = "red", 
+                                "Fox Visits" = "darkorange", 
+                                "Raven Visits" = "black"),
+                     labels = c("Bait Take", 
+                                "Fox Visits", 
+                                "Raven Visits"), name = NULL) +
+  scale_fill_manual(values = c("Bait Take" = "red", 
+                               "Fox Visits" = "darkorange", 
+                               "Raven Visits" = "black"),
+                    labels = c("Bait Take", "Fox Visits", 
+                               "Raven Visits"), name = NULL) +
+  theme_minimal() + 
+  facet_wrap(~treatment) +
+  scale_y_continuous(name = "Bait take (%)", limits = c(0, 1), 
+                     sec.axis = sec_axis(~., 
+                                         name = "Fox and raven visits", 
+                                         breaks = c(0, 1))) +
+  xlab("Study Day")
 
-# Model for bait take by treatment and phase
-summary(glm(bait_take ~ treatment + phase, data=data))
+# Display the plot
+print(bait_visits)
 
-# Model for bait take by treatment and site
-summary(glm(bait_take ~ treatment + site, data=data))
 ```
 
-#### Foxes
-
-```{r}
-# Do fox visits change with treatment or phase?
-summary(glm(fox_visit_n ~ treatment + phase + 
-              rainfall_mm + maximum_temperature_c, data=data))
+```{r, eval=FALSE, include=FALSE}
+# Save the plot as a jpeg
+ggsave("output/bait_visits.jpeg", 
+       height=800, width=2000, unit="px")
 ```
 
-#### Ravens
+## Maps
 
-```{r}
-# Model for visits against treatment and phase
-summary(glm(raven_visit_n ~ treatment + phase + 
-              rainfall_mm + maximum_temperature_c, data=data))
+```{r, eval=FALSE, include=FALSE}
+# Save the plot as a jpeg
+ggsave(plot=gcc_map, "output/gcc features and bait stations map.jpeg", 
+       height=4, width=6, dpi=300)
 ```
 
-## GIS
-
-### Map responses
-
-Here we map our responses of `bait_take`, `fox_visit_n`, and `raven_visit_n` across Ginninderry Conservation Corridor.
+Satellite map
 
 ```{r}
 # Use Google API to fetch a base map
@@ -507,14 +761,15 @@ map <- get_map(location=c(lon=148.9811, lat=-35.2350),
 
 ```{r}
 # Read in shapefile
-gis <- st_read("shapefiles/bait_stations_egg_cta.shp") %>%
+gis <- st_read("input/bait_stations_egg_cta.shp") %>%
   fortify() %>%
   clean_names() %>%
   rename(site=name)
 
 # Map the bait stations
 gin_map <- ggmap(map) + 
-  geom_point(data=gis, size=2, aes(x=long, y=lat, col=treatment)) + 
+  geom_point(data=gis, size=2, 
+             aes(x=long, y=lat, col=treatment)) + 
   theme_minimal() +
   xlab("") + ylab("") + labs(col="Treatment")
 
@@ -522,559 +777,9 @@ gin_map <- ggmap(map) +
 print(gin_map)
 ```
 
-```{r}
-# Combine the bait take df with the GIS df
-data <- left_join(data, gis, by="site")
-
-# Generalised linear model
-mod <- glm(bait_take ~ lat + long + elevation, data=data)
-summary(mod)
-
-# Map the bait stations
-mod_map <- ggmap(map) + 
-  geom_point(data=data, shape=21, size=2, stroke=1, col="white", alpha=0.2,
-             aes(x=long, y=lat, fill=bait_take)) + 
-  theme(axis.text.x=element_blank(), 
-        axis.text.y=element_blank(), 
-        axis.ticks.x=element_blank(), 
-        axis.ticks.y=element_blank(), 
-        plot.title=element_text(hjust=0.5),
-        strip.background=element_rect(fill="#363842"), 
-        strip.text=element_text(colour="white")) +
-  facet_wrap(~phase) +
-  scale_fill_viridis_c() +
-  xlab("") + ylab("") + ggtitle("Phase") + labs(fill="Bait take")
-
-# Display the plot
-print(mod_map)
-```
-
-```{r, eval=FALSE, include=FALSE}
-# Save the plot as a jpeg
-ggsave(plot=mod_map, "figures/bait take map.jpeg", 
-       height=4, width=6, dpi=300)
-```
+# Session information
 
 ```{r}
-# Map the fox visitation
-mod_map <- ggmap(map) + 
-  geom_point(data=data, shape=21, size=2, stroke=1, col="white", alpha=0.2,
-             aes(x=long, y=lat, fill=fox_visit_n)) + 
-  theme(axis.text.x=element_blank(), 
-        axis.text.y=element_blank(), 
-        axis.ticks.x=element_blank(), 
-        axis.ticks.y=element_blank(), 
-        plot.title=element_text(hjust=0.5),
-        strip.background=element_rect(fill="#363842"), 
-        strip.text=element_text(colour="white")) +
-  facet_wrap(~phase) +
-  scale_fill_viridis_c() +
-  xlab("") + ylab("") + ggtitle("Phase") + labs(fill="Fox visits")
-
-# Display the plot
-print(mod_map)
-```
-
-```{r, eval=FALSE, include=FALSE}
-# Save the plot as a jpeg
-ggsave(plot=mod_map, "figures/fox visits map.jpeg", 
-       height=4, width=6, dpi=300)
-```
-
-```{r}
-# Map the fox visitation
-mod_map <- ggmap(map) + 
-  geom_point(data=data, shape=21, size=2, stroke=1, col="white", alpha=0.2,
-             aes(x=long, y=lat, fill=raven_visit_n)) + 
-  theme(axis.text.x=element_blank(), 
-        axis.text.y=element_blank(), 
-        axis.ticks.x=element_blank(), 
-        axis.ticks.y=element_blank(), 
-        plot.title=element_text(hjust=0.5),
-        strip.background=element_rect(fill="#363842"), 
-        strip.text=element_text(colour="white")) +
-  facet_wrap(~phase) +
-  scale_fill_viridis_c() +
-  xlab("") + ylab("") + ggtitle("Phase") + labs(fill="Raven visits")
-
-# Display the plot
-print(mod_map)
-```
-
-```{r, eval=FALSE, include=FALSE}
-# Save the plot as a jpeg
-ggsave(plot=mod_map, "figures/raven visits map.jpeg", 
-       height=4, width=6, dpi=300)
-```
-
-### Spatial features
-
-Here we read in, project, and map the bait stations across Ginninderry Conservation Corridor (GCC) using the following shapefiles:
-
-  1. Bait station points,
-  2. GCC boundary,
-  3. Roads, 
-  4. Construction area,
-  5. Native vegetation areas,
-  6. Pondage, and
-  7. Watercourses.
-
-What we need to do for each layer is check its inherent Coordinate Reference System (CRS, using `st_transform()` to find the last 4-digit number of its output), remind the layer of that number (using `st_set_crs()`), and then reproject it to the CRS we wish to work with (using `st_transform("EPSG:4326")`). 
-
-#### Calculate distance to features
-
-  1. Bait station points
-
-```{r}
-# Read in bait station points
-stations <- st_read("shapefiles/bait_stations_egg_cta.shp") %>%
-  as.data.frame() %>%
-  fortify() %>%
-  clean_names()
-
-# Tranform to Spatial Points Dataframe
-stations_spdf <- SpatialPointsDataFrame( 
-  data.frame(stations$long, stations$lat), 
-  stations, proj4string=CRS("EPSG:4326")) %>% 
-  st_as_sf()
-```
-
-  2. GCC boundary
-
-```{r}
-# Read in the layer
-gcc_bou <- st_read("shapefiles/gcc_boundary_polygon.shp")
-
-# Remind the layer of its CRS then reproject to our desired CRS
-gcc_bou <- gcc_bou %>%
-  # Set projection using sf
-  st_set_crs(st_crs(gcc_bou)) %>%
-  st_transform("EPSG:4326")
-
-# Calculate distance of bait stations to nearest edge of polygon
-dist_bou <- st_geometry(obj = gcc_bou) %>%
-  st_cast(to = 'MULTILINESTRING') %>%
-  st_distance(y=stations_spdf) %>%
-  as.data.frame() %>%
-  # Transpose the df from columns to rows
-  t()
-
-# Join distances to bait stations df 
-stations_spdf <- cbind(stations_spdf, dist_bou)
-```
-
-  3. Roads and tracks
-  
-```{r}
-# Read in the layer
-gcc_roads <- st_read("shapefiles/i5516_roads.shp")
-
-# Remind the layer of its CRS then reproject to our desired CRS
-gcc_roads <- gcc_roads %>%
-  # Set projection using sf
-  st_set_crs(st_crs(gcc_roads)) %>%
-  st_transform("EPSG:4326")
-
-# Convert linestrings to a single multilinestring
-gcc_roads <- st_union(gcc_roads)
-
-# Calculate distance of bait stations to nearest edge of polygon
-dist_roads <- st_geometry(obj = gcc_roads) %>%
-  st_cast(to = 'MULTILINESTRING') %>%
-  st_distance(y=stations_spdf) %>%
-  as.data.frame() %>%
-  # Transpose the df from columns to rows
-  t()
-
-# Join distances to bait stations df 
-stations_spdf <- cbind(stations_spdf, dist_roads)
-```
-
-  4. Construction area
-
-```{r}
-# Read in the layer
-construct <- st_read("shapefiles/gcc_construction_area.shp")
-
-# Remind the layer of its CRS then reproject to our desired CRS
-construct <- construct %>%
-  # Change EPSG here to match the last number from st_crs() output
-  st_set_crs(st_crs(construct)) %>%
-  st_transform("EPSG:4326")
-
-# Calculate distance of bait stations to nearest edge of polygon
-dist_con <- st_geometry(obj = construct) %>%
-  st_cast(to = 'MULTILINESTRING') %>%
-  st_distance(y=stations_spdf) %>%
-  as.data.frame() %>%
-  # Transpose the df from columns to rows
-  t()
-
-# Join distances to bait stations df 
-stations_spdf <- cbind(stations_spdf, dist_con)
-```
-
-  5. Native vegetation areas
-
-```{r}
-# Read in the layer
-gcc_veg <- st_read("shapefiles/i5516_nativevegetationareas.shp")
-
-# Remind the layer of its CRS then reproject to our desired CRS
-gcc_veg <- gcc_veg %>%
-  # Change EPSG here to match the last number from st_crs() output
-  st_set_crs(st_crs(gcc_veg)) %>%
-  st_transform("EPSG:4326")
-
-# Check for and fix invalid geometries
-gcc_veg <- st_make_valid(gcc_veg)
-
-# Convert multiple features to a single feature
-gcc_veg <- st_union(gcc_veg)
-
-# Calculate distance of bait stations to nearest edge of polygon
-dist_veg <- st_geometry(obj = gcc_veg) %>%
-  st_cast(to = 'MULTILINESTRING') %>%
-  st_distance(y=stations_spdf) %>%
-  as.data.frame() %>%
-  # Transpose the df from columns to rows
-  t()
-
-# Join distances to bait stations df 
-stations_spdf <- cbind(stations_spdf, dist_veg)
-```
-
-  6. Pondage
-
-```{r}
-# Read in the layer
-gcc_pond <- st_read("shapefiles/i5516_pondageareas.shp")
-
-# Remind the layer of its CRS then reproject to our desired CRS
-gcc_pond <- gcc_pond %>%
-  # Change EPSG here to match the last number from st_crs() output
-  st_set_crs(st_crs(gcc_pond)) %>%
-  st_transform("EPSG:4326")
-
-# Convert multiple features to a single feature
-gcc_pond <- st_union(gcc_pond)
-
-# Calculate distance of bait stations to nearest edge of polygon
-dist_pond <- st_geometry(obj = gcc_pond) %>%
-  st_cast(to = 'MULTILINESTRING') %>%
-  st_distance(y=stations_spdf) %>%
-  as.data.frame() %>%
-  # Transpose the df from columns to rows
-  t()
-
-# Join distances to bait stations df 
-stations_spdf <- cbind(stations_spdf, dist_pond)
-```
-
-  7. Watercourse lines
-
-```{r}
-# Read in the layer
-gcc_wcl <- st_read("shapefiles/i5516_watercourselines.shp")
-
-# Remind the layer of its CRS then reproject to our desired CRS
-gcc_wcl <- gcc_wcl %>%
-  # Change EPSG here to match the last number from st_crs() output
-  st_set_crs("EPSG:4283") %>%
-  st_transform("EPSG:4326")
-
-# Convert linestrings to a single multilinestring
-gcc_wcl <- st_union(gcc_wcl)
-
-# Calculate distance of bait stations to nearest edge of polygon
-dist_wcl <- st_geometry(obj = gcc_wcl) %>%
-  st_cast(to = 'MULTILINESTRING') %>%
-  st_distance(y=stations_spdf) %>%
-  as.data.frame() %>%
-  # Transpose the df from columns to rows
-  t()
-
-# Join distances to bait stations df 
-stations_spdf <- cbind(stations_spdf, dist_wcl)
-```
-
-```{r}
-# Rename name to site
-stations <- stations_spdf %>%
-  rename(site = name)
-
-# Join response df to spatial df
-data <- left_join(data, stations, by="site") %>%
-  filter(!is.na(bait_take))
-```
-
-#### Model relationship between distance to features
-
-Here we model the relationship between our response variables (i.e., `bait_take`, `fox_vists`, and `raven_visit_n`) and the distance between the bait station and nearby spatial features (i.e., boundary [`dist_bou`], roads [`dist_roads`], construction site [`dist_con`], vegetation strip [`dist_veg`], pondage [`dist_pond`], watercourses [`dist_wcl`]). 
-
-```{r}
-# Subset to only variables in the subsequent models
-data_mod <- data %>%
-  select(bait_take, treatment, fox_visit_n, raven_visit_n, 
-         dist_bou, dist_roads, dist_con, dist_veg, dist_pond, dist_wcl) %>%
-  na.omit()
-
-# Fit the model with glm
-mod <- glm(bait_take ~ treatment + dist_bou + dist_roads + dist_con + 
-              dist_veg + dist_pond + dist_wcl, 
-            data = data_mod, family=binomial, na.action = "na.fail")
-
-# Display summary statistics
-summary(mod)
-
-# Since dist_pond and dist_wcl was non-significant, remove from model
-mod <- glm(bait_take ~ treatment + dist_bou + dist_roads + dist_con + dist_veg, 
-            data = data_mod, family=binomial, na.action = "na.fail")
-
-# Display summary statistics
-summary(mod)
-
-# Perform model selection using dredge() with AICc
-dredge(mod, rank = "AICc") %>%
-  filter(delta <2)
-```
-
-Plot bait take against `dist_bou`, `dist_con`, `dist_roads`, `dist_veg`.
-
-```{r}
-# Plot the distances against bait take
-dist_bou_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_bou, y=bait_take), 
-              col="purple", fill="purple") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest boundary (m)") + 
-  ylab("Bait take (proportion)") + 
-  theme_minimal()
-
-dist_con_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_con, y=bait_take), 
-              col="orange", fill="orange") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest part of construction site (m)") + 
-  ylab("Bait take (proportion)") + 
-  theme_minimal()
-
-dist_road_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_roads, y=bait_take), 
-              col="darkgrey", fill="darkgrey") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest road (m)") + 
-  ylab("Bait take (proportion)") + 
-  theme_minimal()
-
-dist_veg_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_veg, y=bait_take), 
-              col="green", fill="green") +
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest vegetation patch (m)") + 
-  ylab("Bait take (proportion)") + 
-  theme_minimal()
-
-dist_plots <- ggarrange(dist_bou_plot, dist_con_plot, 
-                        dist_road_plot, dist_veg_plot, 
-                        nrow=2, ncol=2)
-
-# Display the plot
-print(dist_plots)
-```
-
-```{r, eval=FALSE, include=FALSE}
-# Save the plot as a jpeg
-ggsave(plot=dist_plots, "figures/bait take by distance and treatment.jpeg", 
-       height=6, width=10, dpi=300)
-```
-
-*Next, repeat these models and plots for fox visits and raven visits.*
-
-Fox visits
-
-```{r}
-# Subset to only variables in the subsequent models
-data_mod <- data %>%
-  select(bait_take, treatment, fox_visit_pa, raven_visit_pa, 
-         dist_bou, dist_roads, dist_con, dist_veg, dist_pond, dist_wcl) %>%
-  mutate(fox_visit_pa=ifelse(fox_visit_pa=="Yes", 1, 0), 
-         raven_visit_pa=ifelse(fox_visit_pa=="Yes", 1, 0)) %>%
-  na.omit()
-
-# Fit the model with glm
-mod <- glm(fox_visit_pa ~ treatment + dist_bou + dist_roads + 
-             dist_con + dist_veg + dist_pond + dist_wcl, 
-            data = data_mod, family=binomial, na.action = "na.fail")
-
-# Display summary statistics
-summary(mod)
-
-# Since dist_pond and dist_wcl was non-significant, remove from model
-mod <- glm(fox_visit_pa ~ treatment + dist_bou + 
-             dist_roads + dist_con + dist_veg, 
-            data = data_mod, family=binomial, na.action = "na.fail")
-
-# Display summary statistics
-summary(mod)
-
-# Perform model selection using dredge() with AICc
-dredge(mod, rank = "AICc") %>%
-  filter(delta <2)
-
-# Plot the distances against bait take
-dist_bou_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_bou, y=bait_take), 
-              col="purple", fill="purple") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest boundary (m)") + 
-  ylab("Fox vistis (proportion)") + 
-  theme_minimal()
-
-dist_con_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_con, y=bait_take), 
-              col="orange", fill="orange") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest part of construction site (m)") + 
-  ylab("Fox visits (proportion)") + 
-  theme_minimal()
-
-dist_road_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_roads, y=bait_take), 
-              col="darkgrey", fill="darkgrey") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest road (m)") + 
-  ylab("Fox visits (proportion)") + 
-  theme_minimal()
-
-dist_veg_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_veg, y=bait_take), 
-              col="green", fill="green") +
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest vegetation patch (m)") + 
-  ylab("Fox visits (proportion)") + 
-  theme_minimal()
-
-dist_plots <- ggarrange(dist_bou_plot, dist_con_plot, 
-                        dist_road_plot, dist_veg_plot, 
-                        nrow=2, ncol=2)
-
-# Display the plot
-print(dist_plots)
-```
-
-Raven visits
-
-```{r}
-# Fit the model with glm
-mod <- glm(raven_visit_pa ~ treatment + dist_bou + dist_roads + dist_con + 
-              dist_veg + dist_pond + dist_wcl, 
-            data = data_mod, family=binomial, na.action = "na.fail")
-table(data_mod$raven_visit_pa)
-# Display summary statistics
-summary(mod)
-
-# Since dist_pond and dist_wcl was non-significant, remove from model
-mod <- glm(raven_visit_pa ~ treatment + dist_bou + dist_roads + dist_con + dist_veg, 
-            data = data_mod, family=binomial, na.action = "na.fail")
-
-# Display summary statistics
-summary(mod)
-
-# Perform model selection using dredge() with AICc
-dredge(mod, rank = "AICc") %>%
-  filter(delta <2)
-```
-
-Plot bait take against `dist_bou`, `dist_con`, `dist_roads`, `dist_veg`.
-
-```{r}
-# Plot the distances against bait take
-dist_bou_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_bou, y=bait_take), 
-              col="purple", fill="purple") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest boundary (m)") + 
-  ylab("Raven visits") + 
-  theme_minimal()
-
-dist_con_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_con, y=bait_take), 
-              col="orange", fill="orange") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest part of construction site (m)") + 
-  ylab("Raven visits") + 
-  theme_minimal()
-
-dist_road_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_roads, y=bait_take), 
-              col="darkgrey", fill="darkgrey") + 
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest road (m)") + 
-  ylab("Raven visits") + 
-  theme_minimal()
-
-dist_veg_plot <- ggplot(data = data_mod) +
-  geom_smooth(aes(x=dist_veg, y=bait_take), 
-              col="green", fill="green") +
-  facet_wrap(~treatment) + 
-  xlab("Distance to nearest vegetation patch (m)") + 
-  ylab("Raven visits") + 
-  theme_minimal()
-
-dist_plots <- ggarrange(dist_bou_plot, dist_con_plot, 
-                        dist_road_plot, dist_veg_plot, 
-                        nrow=2, ncol=2)
-
-# Display the plot
-print(dist_plots)
-```
-
-```{r, eval=FALSE, include=FALSE}
-# Save the plot as a jpeg
-ggsave(plot=dist_plots, "figures/bait take by distance and treatment.jpeg", 
-       height=6, width=10, dpi=300)
-```
-
-
-
-#### Map bait stations and features
-
-Map these layers
-
-```{r}
-# Map the site
-gcc_map <- ggplot() + 
-  geom_sf(data=gcc_roads, col="darkgrey") + 
-  geom_sf(data=construct, fill="orange", alpha=0.3) + 
-  geom_sf(data=gcc_veg, fill="green", alpha=0.3) + 
-  geom_sf(data=gcc_pond, col="lightblue") + 
-  geom_sf(data=gcc_wcl, col="blue") + 
-  geom_sf(data=gcc_bou, fill="purple", alpha=0.3) + 
-  geom_sf(data=stations_spdf, aes(col=treatment)) + 
-  geom_text(data=stations_spdf, aes(x=long, y=lat, label=name), 
-            size=3, color="black") +
-  # Limit map to GCC extent
-  coord_sf(xlim = c(st_bbox(stations_spdf)[[1]]-0.005, 
-                    st_bbox(stations_spdf)[[3]]+0.005), 
-           ylim = c(st_bbox(stations_spdf)[[2]]-0.005, 
-                    st_bbox(stations_spdf)[[4]]+0.005)) +
-  theme_minimal() +
-  scale_fill_manual(values=viridis(18, begin=0.9, end=0.1)) +
-  xlab("") + ylab("") + labs(col="Treatment")
-
-# Display the plot
-print(gcc_map)
-```
-
-```{r, eval=FALSE, include=FALSE}
-# Save the plot as a jpeg
-ggsave(plot=gcc_map, "figures/gcc features and bait stations map.jpeg", 
-       height=4, width=6, dpi=300)
-```
-
-**Session information**
-
-```{r}
-
+# Display version information for R, OS, and packages
+sessionInfo()
 ```
