@@ -1,10 +1,8 @@
-# **Inducing conditioned taste aversion in red foxes and ravens to bush stone-curlew eggs using synthetic scent**
+# **Non-lethal predator impact mitigation: can we induce conditioned taste aversion in red foxes and ravens to chicken eggs using synthetic bush stone-curlew scent?**
 
-Here we describe the analyses we conducted for our article Lambden *et al.* "*Inducing conditioned taste aversion in red foxes and ravens to bush stone-curlew eggs using synthetic scent*".
+Here we describe the analyses conducted for Ellie Lambden's honours thesis: "*Non-lethal predator impact mitigation: can we induce conditioned taste aversion in red foxes and ravens to chicken eggs using synthetic bush stone-curlew scent?*".
 
----
-
-**Background**
+## **Background**
 
 Red foxes have horrifically destructive effects across Australia, however current management works against evolution since baiting and culling select for individuals who are best adapted to avoid our efforts. As such, these traits are enhanced with each generation, thus exacerbating the problem in the long term.
 
